@@ -4,7 +4,7 @@
   "description": "Website to host portfolio and projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/TedtheDev/React-Portfolio-Website/issues"
   },
-  "homepage": "https://github.com/TedtheDev/React-Portfolio-Website#readme"
+  "homepage": "https://github.com/TedtheDev/React-Portfolio-Website#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2"
+  }
 }
