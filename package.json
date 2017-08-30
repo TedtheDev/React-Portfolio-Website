@@ -1,0 +1,19 @@
+{
+  "name": "react-portfolio-website",
+  "version": "1.0.0",
+  "description": "Website to host portfolio and projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TedtheDev/React-Portfolio-Website.git"
+  },
+  "author": "Tyler Edmunds - TedtheDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TedtheDev/React-Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/TedtheDev/React-Portfolio-Website#readme"
+}
