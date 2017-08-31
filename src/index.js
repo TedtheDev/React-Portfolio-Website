@@ -11,7 +11,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render({
+ReactDOM.render(
   <App />,
-  docuement.getElementById('app')
-})
+  document.querySelector('.app')
+)
