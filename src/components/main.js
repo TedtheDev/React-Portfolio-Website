@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import Content from './content';
-import Content2 from './content_2';
+import Blog from './blog';
+import Resume from './resume';
+import Contact from './contact';
+import Portfolio from './portfolio';
 
 const MainWrapper = styled.div`
   grid-area: app;
@@ -21,7 +24,10 @@ const Main = (props) => {
       <div style={{gridArea:"content"}}>
         <Switch>
           <Route exact path="/" component={Content} />
-          <Route exact path="/content2" component={Content2} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/resume" component={Resume} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </div>
     </MainWrapper>
