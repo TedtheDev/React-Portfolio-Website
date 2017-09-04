@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Header from './components/header';
+import Main from './components/main';
 
 const AppStyled = styled.div`
-  background: white;
+  background: #FFF;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 9fr 1fr;
   grid-template-areas:
-    "header header header"
-    ". app ."
-    "footer footer footer"
+    "header"
+    "app "
+    "footer"
 `
+
 class App extends Component {
   render() {
     return (
-      <AppStyled>
-        Hello from App
-      </AppStyled>
+      <Router>
+        <AppStyled>
+          <Header />
+          <Main />
+        </AppStyled>
+      </Router>
     )
   }
 }

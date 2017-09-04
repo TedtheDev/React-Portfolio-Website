@@ -4,7 +4,7 @@
   "description": "Website to host portfolio and projects",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server --hot --inline"
   },
   "repository": {
     "type": "git",
