@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
-import Content from './content';
+import MainContent from './main_content';
 import Blog from './blog';
 import Resume from './resume';
 import Contact from './contact';
@@ -23,7 +23,7 @@ const Main = (props) => {
     <MainWrapper>
       <div style={{gridArea:"content"}}>
         <Switch>
-          <Route exact path="/" component={Content} />
+          <Route exact path="/" component={MainContent} />
           <Route exact path="/portfolio" component={Portfolio} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/resume" component={Resume} />

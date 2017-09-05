@@ -7,6 +7,8 @@ import NavButton from './nav_button';
 const NavWrapper = styled.div`
   background: #FFF;
   grid-area: nav;
+  justify-self: stretch;
+  align-self: center;
 `
 
 const NavButtons = (props) => {
