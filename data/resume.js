@@ -3,8 +3,8 @@ export const resumeData = {
   email: 'tylerjedmunds@gmail.com',
   linkedInLink: 'https://www.linkedin.com/in/tyler-edmunds',
   gitHubLink: 'https://github.com/TedtheDev',
-  Skills: {
-    languages: ['JavaScript (ES6)','CSS3', 'HTML5','SQL', 'PHP','Java']
+  skills: {
+    languages: ['JavaScript (ES6)','CSS3', 'HTML5','SQL', 'PHP','Java'],
     frameworks: [
       'React', 'Redux','NodeJS','ExpressJS','Mocha','Webpack','Angular','MaterialUI',
       'Bootstrap','SASS','Stylus','jQuery','GraphQL','Dojo','Jade/Pug','IBM BPM'
@@ -62,17 +62,17 @@ export const resumeData = {
     timePeriod: 'Aug 2009 - May 2014',
     degree: 'B.S. Management Information Systems',
     secondaryMajor: 'International Business',
-    minor: 'German'
+    minor: 'German',
     studyAbroad: {
       russia: {
         collegeName: 'Peter the Great St. Petersburg State Polytechnical University',
-        collegeLink: ''
+        collegeLink: '',
         location: 'St. Petersburg, Russia',
         timePeriod: 'Summer 2010'
       },
       germany: {
         collegeName: 'Freie Universitaet',
-        collegeLink: ''
+        collegeLink: '',
         location: 'Berlin, Germany',
         timePeriod: 'Spring 2012'
       }
