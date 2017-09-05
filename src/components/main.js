@@ -16,7 +16,7 @@ const MainWrapper = styled.div`
   grid-template-rows: 1fr;
   grid-template-areas:
     ". content ."
-`
+`;
 
 const Main = (props) => {
   return (
