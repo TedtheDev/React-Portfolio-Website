@@ -31,6 +31,11 @@ const Resume = (props) => {
   return(
     <div>
       <div>
+        <h5>Links</h5>
+        <div>{resumeData.linkedInLink}</div>
+        <div>{resumeData.gitHubLink}</div>
+      </div>
+      <div>
         <h2>Skills</h2>
         {
           Object.keys(resumeData.skills).map((category,index) => {
