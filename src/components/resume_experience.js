@@ -1,31 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Position from './resume_experience_position';
 
-const Position = ({ position }) => {
-  const { positionTitle, employer, timePeriod, duties } = position;
-    return (
-      <div>
-        <div>{positionTitle}</div>
-        <div>{employer}</div>
-        <div>{timePeriod}</div>
-        <ul>
-          {
-            duties.map((duty, index) => {
-              return <li key={index}>{duty}</li>
-            })
-          }
-        </ul>
-      </div>
-    )
-};
-
-const ResumeExperience = (props) => {
+const ResumeExperience = ({experience, ...props}) => {
   return (
     <div>
       <h2>Experience</h2>
       <ul>
         {
-          props.experience.map((position, index) => {
+          experience.map((position, index) => {
             return <Position key={index} position={position} />
           })
         }

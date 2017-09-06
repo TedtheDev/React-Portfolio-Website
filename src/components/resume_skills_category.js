@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ResumeSkillsCategory = (props) => {
+const ResumeSkillsCategory = ({category, skills, ...props}) => {
   return (
     <div>
-      <div>{props.category}</div>
+      <div>{category}</div>
       <ul>
         {
-          props.skills.map((skill, index) => {
+          skills.map((skill, index) => {
             return <li key={index}>{skill}</li>
           })
         }

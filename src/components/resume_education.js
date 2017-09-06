@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ResumeEducation = ({ education }) => {
+const ResumeEducation = ({ education, ...props }) => {
   const { collegeName, location, timePeriod, degree, secondaryMajor, minor, studyAbroad } = education;
   return (
     <div>

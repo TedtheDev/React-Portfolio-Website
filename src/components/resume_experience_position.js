@@ -1,16 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ResumeExperiencePosition = (props) => {
-  return (
-    <div>
-      position
-    </div>
-  )
+const Position = ({ position, ...props }) => {
+  const { positionTitle, employer, timePeriod, duties } = position;
+    return (
+      <div>
+        <div>{positionTitle}</div>
+        <div>{employer}</div>
+        <div>{timePeriod}</div>
+        <ul>
+          {
+            duties.map((duty, index) => {
+              return <li key={index}>{duty}</li>
+            })
+          }
+        </ul>
+      </div>
+    )
 };
 
 React.propTypes = {
-    experience: PropTypes.object.isRequired
+    position: PropTypes.object.isRequired
 };
 
-export default ResumeExperience;
+export default Position;
