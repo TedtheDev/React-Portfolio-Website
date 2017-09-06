@@ -63,19 +63,19 @@ export const resumeData = {
     degree: 'B.S. Management Information Systems',
     secondaryMajor: 'International Business',
     minor: 'German',
-    studyAbroad: {
-      russia: {
-        collegeName: 'Peter the Great St. Petersburg State Polytechnical University',
-        collegeLink: '',
-        location: 'St. Petersburg, Russia',
+    studyAbroad: [
+      {
+        collegeName: 'Peter the Great St.Petersburg Polytechnic University',
+        collegeLink: 'http://english.spbstu.ru/',
+        location: 'Saint Petersburg, Russia',
         timePeriod: 'Summer 2010'
       },
-      germany: {
-        collegeName: 'Freie Universitaet',
-        collegeLink: '',
+      {
+        collegeName: 'Freie Universität Berlin',
+        collegeLink: 'http://www.fu-berlin.de/en/index.html',
         location: 'Berlin, Germany',
         timePeriod: 'Spring 2012'
       }
-    }
+    ]
   }
 }
