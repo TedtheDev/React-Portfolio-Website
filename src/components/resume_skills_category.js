@@ -4,14 +4,19 @@ import PropTypes from 'prop-types';
 const ResumeSkillsCategory = ({category, skills, ...props}) => {
   return (
     <div>
-      <div>{category}</div>
-      <ul>
+      <div><strong>{category}: </strong></div>
+      <div>
         {
           skills.map((skill, index) => {
-            return <li key={index}>{skill}</li>
+            if(index !== skills.length - 1) {
+              return <span key={index}>{skill}, </span>
+            } else {
+              return <span key={index}>{skill}</span>
+            }
+
           })
         }
-      </ul>
+      </div>
     </div>
   )
 };

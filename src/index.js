@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Header from './components/header';
 import Main from './components/main';
+import Footer from './components/footer';
 
 const AppStyled = styled.div`
   background: #FFF;
@@ -26,6 +27,7 @@ class App extends Component {
         <AppStyled>
           <Header />
           <Main />
+          <Footer />
         </AppStyled>
       </Router>
     )

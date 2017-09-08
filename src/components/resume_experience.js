@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 import Position from './resume_experience_position';
+
+const ExperienceDiv = styled.div`
+  grid-area: experience;
+`;
 
 const ResumeExperience = ({experience, ...props}) => {
   return (
-    <div>
+    <ExperienceDiv>
       <h2>Experience</h2>
-      <ul>
+      <div>
         {
           experience.map((position, index) => {
             return <Position key={index} position={position} />
           })
         }
-      </ul>
-    </div>
+      </div>
+    </ExperienceDiv>
   )
 };
 

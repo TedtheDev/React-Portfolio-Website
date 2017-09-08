@@ -27,25 +27,51 @@ function unCamelCase(string) {
   return string.join(''); // return string by joining array
 }
 
+const ResumeDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .1fr .5fr .5fr .5fr;
+  grid-template-areas:
+    "links"
+    "resumeSkills"
+    "experience"
+    "education"
+`;
+
+const SkillsDiv = styled.div`
+  grid-area: resumeSkills
+  display: grid;
+  grid-template-columns: .5fr .5fr .5fr;
+  grid-template-rows: .1fr .1fr .1fr;
+  grid-template-areas:
+    "skills skills skills"
+    "21 22 23"
+    "31 32 33"
+`;
+
+const LinksDiv = styled.div`
+  grid-area: links;
+  grid-column: 1 / span 1;
+`
 const Resume = (props) => {
   return(
-    <div>
+    <ResumeDiv>
       <div>
-        <h5>Links</h5>
+        <h4>Links</h4>
         <div>{resumeData.linkedInLink}</div>
         <div>{resumeData.gitHubLink}</div>
       </div>
-      <div>
-        <h2>Skills</h2>
+      <SkillsDiv>
+        <h2 style={{grid:"skills", gridColumn: "1 / span 3" }}>Skills</h2>
         {
           Object.keys(resumeData.skills).map((category,index) => {
             return <ResumeSkillsCategory key={index} category={unCamelCase(category)} skills={resumeData.skills[category]}/>
           })
         }
-      </div>
+      </SkillsDiv>
       <ResumeExperience experience={resumeData.experience} />
       <ResumeEducation education={resumeData.education} />
-    </div>
+    </ResumeDiv>
   )
 };
 
