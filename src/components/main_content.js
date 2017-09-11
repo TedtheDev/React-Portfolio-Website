@@ -19,10 +19,12 @@ const LatestProject = styled.div`
 const Content = (props) => {
   return (
     <ContentWrapper>
-      insert about stuff here......
+      <div>Software Developer</div>
       <LatestProject>
-        LatestProject
-        <Project project={portfolioData[0]} />
+        <div>
+          Latest Project
+          <Project project={portfolioData[0]} />
+        </div>
       </LatestProject>
     </ContentWrapper>
   )

@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BlogPostWrapper = styled.div`
-
+const BlogPostDiv = styled.div`
+  margin: 2% 0
 `;
 
 const BlogPost = (props) => {
   return (
-    <BlogPostWrapper>
-      {props.post.title}
-      {props.post.date}
-      {props.post.content}
-      --------------------
-    </BlogPostWrapper>
+    <BlogPostDiv>
+      <div>
+        <div>{props.post.title}</div>
+        <div>{props.post.date}</div>
+      </div>
+      <div>{props.post.content}</div>
+    </BlogPostDiv>
   )
 };
 
