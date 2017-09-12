@@ -12,20 +12,21 @@ const ContentWrapper = styled.div`
   align-content: space-between;
 `;
 
-const LatestProject = styled.div`
+const LatestProjectDiv = styled.div`
   margin-top: 5%;
+  border: 1px solid black
 `;
 
 const Content = (props) => {
   return (
     <ContentWrapper>
-      <div>Software Developer</div>
-      <LatestProject>
+      <h1>Software Developer</h1>
+      <LatestProjectDiv>
         <div>
-          Latest Project
+          <h3>Latest Project</h3>
           <Project project={portfolioData[0]} />
         </div>
-      </LatestProject>
+      </LatestProjectDiv>
     </ContentWrapper>
   )
 };

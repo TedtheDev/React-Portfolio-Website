@@ -58,8 +58,8 @@ const Resume = (props) => {
     <ResumeDiv>
       <div>
         <h4>Links</h4>
-        <div>{resumeData.linkedInLink}</div>
-        <div>{resumeData.gitHubLink}</div>
+        <div><a href={resumeData.linkedInLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-linkedin" aria-hidden="true"></i></a>{resumeData.linkedInUsername}</div>
+        <div><a href={resumeData.gitHubLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-github" aria-hidden="true"></i></a>{resumeData.gitHubUsername}</div>
       </div>
       <SkillsDiv>
         <h2 style={{grid:"skills", gridColumn: "1 / span 3" }}>Skills</h2>

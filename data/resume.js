@@ -2,7 +2,9 @@ export const resumeData = {
   name: 'Tyler Edmunds',
   email: 'tylerjedmunds@gmail.com',
   linkedInLink: 'https://www.linkedin.com/in/tyler-edmunds',
+  linkedInUsername: 'tyler-edmunds',
   gitHubLink: 'https://github.com/TedtheDev',
+  gitHubUsername: 'TedtheDev',
   skills: {
     languages: ['JavaScript (ES6)','CSS3', 'HTML5','SQL', 'PHP','Java'],
     frameworks: [
