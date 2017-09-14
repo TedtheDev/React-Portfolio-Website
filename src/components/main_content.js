@@ -21,6 +21,8 @@ const Content = (props) => {
   return (
     <ContentWrapper>
       <h1>Software Developer</h1>
+      <h1>Gamer</h1>
+      <h1>Wannabe Polyglot</h1>
       <LatestProjectDiv>
         <div>
           <h3>Latest Project</h3>
