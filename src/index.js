@@ -38,8 +38,8 @@ class App extends Component {
     return (
       <Router>
         <AppStyled>
-          <HamburgerMenuSlider sliderOpen={this.state.sliderOpen}/>
-          <Header toggleSlider={this.toggleSlider}/>
+          <HamburgerMenuSlider toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen}/>
+          <Header toggleSlider={this.toggleSlider} />
           <Main />
           <Footer />
         </AppStyled>
