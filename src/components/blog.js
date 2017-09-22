@@ -9,14 +9,25 @@ const BlogDiv = styled.div`
     width: 100%;
 `;
 
+const BlogScrollDiv = styled.div`
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+`;
+
 const Blog = (props) => {
   return (
     <BlogDiv>
-      {
-        blogData.map((post, index) => {
-          return <BlogPost key={index} post={post} />
-        })
-      }
+      <BlogScrollDiv>
+        {
+          blogData.map((post, index) => {
+            return <BlogPost key={index} post={post} />
+          })
+        }
+      </BlogScrollDiv>
     </BlogDiv>
   )
 }

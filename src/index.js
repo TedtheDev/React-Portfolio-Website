@@ -14,7 +14,7 @@ const AppStyled = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 9fr 1fr;
+  grid-template-rows: 1fr 80% 1fr;
   grid-template-areas:
     "header"
     "app "
@@ -37,12 +37,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <AppStyled>
+        <div style={{width:"100%",height:"100%"}}>
           <HamburgerMenuSlider toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen}/>
-          <Header toggleSlider={this.toggleSlider} />
-          <Main />
-          <Footer />
-        </AppStyled>
+          <AppStyled>
+            <Header toggleSlider={this.toggleSlider} />
+            <Main />
+            <Footer />
+          </AppStyled>
+        </div>
       </Router>
     )
   }

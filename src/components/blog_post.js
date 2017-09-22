@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BlogPostDiv = styled.div`
-  margin: 2% 0
+  margin: 2% 0;
+  width:
 `;
 
 const BlogPost = (props) => {

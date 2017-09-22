@@ -13,7 +13,7 @@ const MainWrapper = styled.div`
   background: #FFF;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 100%;
   grid-template-areas:
     ". content ."
 `;
@@ -21,7 +21,7 @@ const MainWrapper = styled.div`
 const Main = (props) => {
   return (
     <MainWrapper>
-      <div style={{gridArea:"content"}}>
+      <div style={{gridArea:"content",width:"100%",height:"100%"}}>
         <Switch>
           <Route exact path="/" component={MainContent} />
           <Route exact path="/portfolio" component={Portfolio} />

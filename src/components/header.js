@@ -6,7 +6,7 @@ import LogoName from './logo_name';
 import NavButtons from './nav_buttons';
 
 const HeaderDiv = styled.div`
-  background: #red;
+  background: #FFF;
   grid-area: header;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
