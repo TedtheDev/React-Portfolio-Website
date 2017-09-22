@@ -3,15 +3,25 @@ import styled from 'styled-components';
 import { portfolioData } from '../../data/portfolio';
 import Project from './portfolio_project';
 
+const PortfolioDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  grid-area: content;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+`;
+
 const Portfolio = (props) => {
   return(
-    <div>
+    <PortfolioDiv>
       {
         portfolioData.map((project, index) => {
           return <Project key={index} project={project} />
         })
       }
-    </div>
+    </PortfolioDiv>
   )
 };
 
