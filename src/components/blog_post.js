@@ -2,17 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BlogPostDiv = styled.div`
-  margin: 2% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .15fr 1fr;
+  grid-row-gap: 4%;
+  grid-template-areas:
+    "title date"
+    "content content";
 `;
 
 const BlogPost = (props) => {
   return (
     <BlogPostDiv>
-      <div>
-        <div>{props.post.title}</div>
-        <div>{props.post.date}</div>
-      </div>
-      <div>{props.post.content}</div>
+      <div style={{gridArea:"title",fontSize:"1.5rem"}}>{props.post.title}</div>
+      <div style={{gridArea:"date",fontSize:"1.1rem"}}>{props.post.date}</div>
+      <div style={{gridArea:"content"}}>{props.post.content}</div>
     </BlogPostDiv>
   )
 };

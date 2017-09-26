@@ -17,6 +17,7 @@ const BlogScrollDiv = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    grid-row-gap: 5%;
 `;
 
 const Blog = (props) => {
