@@ -5,7 +5,7 @@ import { blogData } from '../../data/blog';
 import BlogPost from './blog_post';
 
 const BlogDiv = styled.div`
-    grid-area: content
+    grid-area: content;
     height: 100%;
     width: 100%;
 `;
