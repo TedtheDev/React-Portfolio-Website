@@ -15,16 +15,17 @@ const HeaderDiv = styled.div`
     ". logo nav .";
 `;
 
-const Header = ({toggleSlider, ...props}) => {
+const Header = ({toggleSlider, sliderOpen, ...props}) => {
   return (
     <HeaderDiv>
       <LogoName />
-      <NavButtons toggleSlider={toggleSlider}/>
+      <NavButtons toggleSlider={toggleSlider} sliderOpen={sliderOpen} />
     </HeaderDiv>
   )
 }
 
 Header.propTypes = {
-  toggleSlider: PropTypes.func.isRequired
+  toggleSlider: PropTypes.func.isRequired,
+  sliderOpen: PropTypes.bool.isRequired
 }
 export default Header;

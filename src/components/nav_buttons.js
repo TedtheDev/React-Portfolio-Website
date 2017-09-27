@@ -6,33 +6,40 @@ import { Link } from 'react-router-dom';
 import NavButton from './nav_button';
 import HamburgerMenu from './hamburger_menu';
 
-const NavDiv = styled.div`
-  background: #FFF;
+const NavDiv = styled.nav`
   grid-area: nav;
-  justify-self: stretch;
-  align-self: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  @media (max-width: 800px) {
+    justify-items: end;
+  }
 `;
 
 const ButtonsDiv = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 1fr;
 
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
-const HamburgerMenuDiv = styled.span`
+const HamburgerMenuDiv = styled.div`
   display: none;
 
   @media (max-width: 800px) {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 `;
 
-const NavButtons = ({toggleSlider, ...props}) => {
+const NavButtons = ({toggleSlider, sliderOpen, ...props}) => {
   return (
     <NavDiv>
       <ButtonsDiv>
@@ -42,13 +49,14 @@ const NavButtons = ({toggleSlider, ...props}) => {
         <NavButton to="/contact" buttonText="Contact" />
       </ButtonsDiv>
       <HamburgerMenuDiv>
-        <HamburgerMenu toggleSlider={toggleSlider}/>
+        <HamburgerMenu toggleSlider={toggleSlider} sliderOpen={sliderOpen}/>
       </HamburgerMenuDiv>
     </NavDiv>
   )
 };
 
 NavButtons.propTypes = {
-  toggleSlider: PropTypes.func.isRequired
+  toggleSlider: PropTypes.func.isRequired,
+  sliderOpen: PropTypes.bool.isRequired
 }
 export default NavButtons;

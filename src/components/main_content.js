@@ -14,7 +14,6 @@ const ContentWrapper = styled.div`
 
 const LatestProjectDiv = styled.div`
   margin-top: 5%;
-  border: 1px solid black
 `;
 
 const Content = (props) => {

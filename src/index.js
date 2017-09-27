@@ -40,7 +40,7 @@ class App extends Component {
         <div style={{width:"100%",height:"100%"}}>
           <HamburgerMenuSlider toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen}/>
           <AppStyled>
-            <Header toggleSlider={this.toggleSlider} />
+            <Header toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen} />
             <Main />
             <Footer />
           </AppStyled>
