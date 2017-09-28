@@ -11,17 +11,19 @@ const HamburgerMenuWrapper = styled.div`
 
 const HamburgerDiv = styled.div`
   width: 75px;
-  height: 10px;
-  background: green;
+  height: 8px;
+  border-radius: 10px;
+  background: #fcfeff;
   cursor: pointer;
 
   &::before {
     position: absolute;
     width: 75px;
-    height: 10px;
-    background: green;
+    height: 8px;
+    border-radius: 10px;
+    background: #fcfeff;
     content: "";
-    transform: translateY(${props => props.sliderOpen ? '-200%' : '-150%'});
+    transform: translateY(${props => props.sliderOpen ? '-250%' : '-175%'});
     transition: transform .2s;
     cursor: pointer;
   }
@@ -29,10 +31,11 @@ const HamburgerDiv = styled.div`
   &::after {
     position: absolute;
     width: 75px;
-    height: 10px;
-    background: green;
+    height: 8px;
+    border-radius: 10px;
+    background: #fcfeff;
     content: "";
-    transform: translateY(${props => props.sliderOpen ? '200%' : '150%'});
+    transform: translateY(${props => props.sliderOpen ? '250%' : '175%'});
     transition: transform .2s;
     cursor: pointer;
   }

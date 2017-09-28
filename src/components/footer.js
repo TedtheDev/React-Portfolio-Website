@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 const FooterDiv = styled.div`
   grid-area: footer;
-  background: grey;
+  background: #0094ce;
 `;
 
 const Footer = (props) => {
   return (
     <FooterDiv>
-      Footer
     </FooterDiv>
   )
 };

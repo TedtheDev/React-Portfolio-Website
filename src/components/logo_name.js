@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const LogoNameWrapper = styled.div`
-  background: #FFF;
   grid-area: logo;
   justify-self: start;
   align-self: center;

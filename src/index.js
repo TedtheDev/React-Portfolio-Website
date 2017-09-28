@@ -9,7 +9,7 @@ import Footer from './components/footer';
 import HamburgerMenuSlider from './components/hamburger_menu_slider';
 
 const AppStyled = styled.div`
-  background: #FFF;
+  background: #fcfeff;
   width: 100%;
   height: 100%;
   display: grid;

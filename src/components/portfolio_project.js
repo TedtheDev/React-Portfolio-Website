@@ -11,9 +11,9 @@ const Project = (props) => {
     <ProjectDiv>
       <div style={{display:"flex"}}>
         <h3>{props.project.projectName}</h3>
-        <a href={props.project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>
+        <a href={props.project.liveLink} target="_blank" rel="noopener noreferrer"><i className="fa fa-desktop fa-2x" aria-hidden="true"></i></a>
+        <a href={props.project.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
       </div>
-      <a href={props.project.github} target="_blank" rel="noopener noreferrer">{props.project.github}</a>
       <div>{props.project.description}</div>
       <div>
         Technologies:

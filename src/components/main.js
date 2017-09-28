@@ -10,7 +10,6 @@ import Portfolio from './portfolio';
 
 const MainWrapper = styled.div`
   grid-area: app;
-  background: #FFF;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 100%;
