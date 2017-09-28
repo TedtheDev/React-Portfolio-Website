@@ -23,6 +23,8 @@ const ButtonsDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
 
   @media (max-width: 800px) {
     display: none;

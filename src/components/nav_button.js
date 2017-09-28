@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Button = styled.button`
-  background: rgb(145, 228, 184);
+  background: #6ccff6;
   border: none;
-  padding: 5px;
-  margin: 1%;
-  font-size: 1.2rem;
-  border: 1px #000 solid;
-  border-radius: 10%;
+  padding: 10px;
+  font-size: 1.3rem;
+  border: 2px #000c11 solid;
   cursor: pointer;
+  color: #000c11;
 `
 
 const NavButton = (props) => {
