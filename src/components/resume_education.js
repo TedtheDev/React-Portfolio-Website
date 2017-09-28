@@ -30,9 +30,9 @@ const ResumeEducation = ({ education, ...props }) => {
         {
           studyAbroad.map((abroad, index) => {
             if(index !== studyAbroad.length - 1) {
-              return <span>{abroad.location},{abroad.timePeriod};</span>
+              return <span key={index}>{abroad.location},{abroad.timePeriod};</span>
             } else {
-              return <span>{abroad.location},{abroad.timePeriod}</span>
+              return <span key={index}>{abroad.location},{abroad.timePeriod}</span>
             }
           })
         }

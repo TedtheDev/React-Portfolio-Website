@@ -31,11 +31,14 @@ const ButtonsDiv = styled.div`
 
 const HamburgerMenuDiv = styled.div`
   display: none;
+  height:50%;
+  align-items: center;
 
   @media (max-width: 800px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    align-items: center;
   }
 `;
 

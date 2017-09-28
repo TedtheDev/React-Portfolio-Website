@@ -2,6 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+const HamburgerMenuWrapper = styled.div`
+  height: 100%;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+`;
+
 const HamburgerDiv = styled.div`
   width: 75px;
   height: 10px;
@@ -33,9 +40,9 @@ const HamburgerDiv = styled.div`
 
 const HamburgerMenu = ({toggleSlider, sliderOpen, ...props}) => {
   return (
-    <div onClick={toggleSlider}>
+    <HamburgerMenuWrapper onClick={toggleSlider}>
       <HamburgerDiv sliderOpen={sliderOpen} />
-    </div>
+    </HamburgerMenuWrapper>
   )
 };
 
