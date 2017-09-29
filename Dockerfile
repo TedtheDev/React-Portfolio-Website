@@ -5,5 +5,4 @@ COPY package-lock.json .
 RUN npm install
 RUN npm build
 COPY . .
-EXPOSE 8080
 CMD ["npm","start"]
