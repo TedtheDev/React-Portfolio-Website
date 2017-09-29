@@ -32,8 +32,8 @@ const HamburgerSliderDiv = styled.div`
 const HamburgerSliderMenuDiv = styled.div`
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% auto;
     grid-row-gap: 15px;
     justify-items: center;
     align-items: center;
@@ -50,20 +50,25 @@ const HamburgerSliderMenuDiv = styled.div`
 
 const NavButton = {
   textDecoration:"none",
-  background: "green",
+  background: "#0094ce",
   padding: "5px",
   height: "100%",
-  width: "90%"
+  width: "90%",
+  color: "#fcfeff",
+  boxShadow: "1px 5px 0px #747c7f",
+  border: "2px #000 solid"
+
 };
 
-const HamburgerMenuSlider = (props) => {
+const HamburgerMenuSlider = ({toggleSlider, sliderOpen, ...props}) => {
   return (
     <HamburgerSliderDiv>
-      <HamburgerSliderMenuDiv sliderOpen={props.sliderOpen} >
-        <NavLink style={NavButton} onClick={props.toggleSlider} to='/portfolio'>Portfolio</NavLink>
-        <NavLink style={NavButton} onClick={props.toggleSlider} to='/blog'>Blog</NavLink>
-        <NavLink style={NavButton} onClick={props.toggleSlider} to='/resume'>Resume</NavLink>
-        <NavLink style={NavButton} onClick={props.toggleSlider} to='/contact'>Contact</NavLink>
+      <HamburgerSliderMenuDiv sliderOpen={sliderOpen} >
+        <span></span>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/portfolio'>Portfolio</NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/blog'>Blog</NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/resume'>Resume</NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/contact'>Contact</NavLink>
       </HamburgerSliderMenuDiv>
     </HamburgerSliderDiv>
   )

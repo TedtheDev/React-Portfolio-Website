@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { portfolioData } from '../../data/portfolio';
 import Project from './portfolio_project';
 
-const ContentWrapper = styled.div`
+const ContentDiv = styled.div`
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
@@ -13,22 +13,24 @@ const ContentWrapper = styled.div`
 `;
 
 const LatestProjectDiv = styled.div`
-  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15%);
 `;
 
 const Content = (props) => {
   return (
-    <ContentWrapper>
+    <ContentDiv>
       <h1>Software Developer</h1>
       <h1>Gamer</h1>
       <h1>Wannabe Polyglot</h1>
       <LatestProjectDiv>
-        <div>
-          <h3>Latest Project</h3>
+          <h2>Latest Project</h2>
           <Project project={portfolioData[0]} />
-        </div>
       </LatestProjectDiv>
-    </ContentWrapper>
+    </ContentDiv>
   )
 };
 
