@@ -12,7 +12,7 @@ export const blogData = [
 
   },
   {
-    title: "Testing React Components on the Front End",
+    title: "Testing React Components",
     date: 'Aug 15th, 2017',
     content:
       "I have always wanted to learn how to test the front end, so I bought Stephen Grider's Advance React and Redux course. He goes over testing React front end code using Mocha, Chai, and JSDom. I have only done a little bit of the testing of the front end code. The course goes other things, such as authentication and aksdflakdsflk. "

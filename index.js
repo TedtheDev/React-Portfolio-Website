@@ -9,6 +9,10 @@ app.get('/build/bundle.js', (req,res) => {
   res.sendFile(path.resolve(__dirname, './build/bundle.js'));
 })
 
+app.get('*', (req,res) => {
+  res.redirect('/');
+})
+
 app.listen(8000, () => {
   console.log('listening on port 8000');
 });
