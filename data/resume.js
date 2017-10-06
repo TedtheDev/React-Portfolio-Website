@@ -23,28 +23,27 @@ export const resumeData = {
   },
   experience: [
     {
-      positionTitle: 'Software Developer',
+      positionTitle: 'Software Developer II',
       employer: 'Caterpillar Inc.',
-      timePeriod: 'June 2014 - Current',
+      timePeriod: 'Dec 2016 - Current',
       duties: [
-        'Developed resource management tool to handle real-time data vs weekly import using excel',
+        'Design, document, and implement development workflow tools for new DevOps pipeline',
         'Developed supplier onboarding application to onboard suppliers from 30 days to 14 days',
         'Added new functionalities to codebase: Excel export, Comment length count, Animated Tooltip',
         'Designed database tables to handle several different process flows for multiple supplier requests',
-        'Created common process application for on-demand customers to spin up a simple process in a couple days',
-        'Designed and implemented customized CSS theme for all applications to support the Caterpillar brand',
-        'Support 4 applications through a ticket system and communicate to multiple customers of said applications',
         'Facilitate Dev Jam Friday sessions to about 10 co-workers to learn/explore new technologies',
         'Serve as Caterpillar Recruiter to Iowa State University'
       ]
     },
     {
-      positionTitle: 'IT Student Aide',
-      employer: 'Iowa State University',
-      timePeriod: 'Sept 2013 - May 2014',
+      positionTitle: 'Software Developer I',
+      employer: 'Caterpillar Inc.',
+      timePeriod: 'Jun 2014 - Nov 2016',
       duties: [
-        'Supported 10-15 office computers by troubleshooting and updating software',
-        'Managed and updated Joomla website content to inform 3000 international students'
+        'Supported 4 applications through a ticket system and communicate to multiple customers of said applications',
+        'Developed resource management tool to handle real-time data vs weekly import using excel',
+        'Created common process application for on-demand customers to spin up a simple process in a couple days',
+        'Designed and implemented customized CSS theme for all applications to support the Caterpillar brand'
       ]
     },
     {

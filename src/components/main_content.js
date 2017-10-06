@@ -4,12 +4,13 @@ import { portfolioData } from '../../data/portfolio';
 import Project from './portfolio_project';
 
 const ContentDiv = styled.div`
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: space-between;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
 `;
 
 const LatestProjectDiv = styled.div`

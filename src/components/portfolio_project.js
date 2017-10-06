@@ -5,14 +5,21 @@ import PropTypes from 'prop-types';
 const ProjectDiv = styled.div`
 `;
 
+const ProjectHeading = styled.div`
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr .5fr .5fr 1fr;
+    margin-bottom: 2%;
+`;
+
 const Project = (props) => {
   return (
     <ProjectDiv>
-      <div style={{display:"flex", alignItems: "center", marginBottom:"2%"}}>
+      <ProjectHeading>
         <div style={{fontSize:"1.3rem"}}><strong>{props.project.projectName}</strong></div>
         <a href={props.project.liveLink} target="_blank" rel="noopener noreferrer"><i className="fa fa-desktop fa-2x" aria-hidden="true"></i></a>
         <a href={props.project.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
-      </div>
+      </ProjectHeading>
       <div>{props.project.description}</div>
       <p>
         <strong>Technologies</strong>:

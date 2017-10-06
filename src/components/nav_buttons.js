@@ -25,6 +25,7 @@ const ButtonsDiv = styled.div`
   grid-template-rows: 1fr;
   align-items: center;
   justify-items: center;
+  grid-column-gap: 1%;
 
   @media (max-width: 800px) {
     display: none;
