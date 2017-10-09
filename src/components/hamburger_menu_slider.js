@@ -54,7 +54,9 @@ const NavButton = {
   width: "90%",
   color: "#fcfeff",
   boxShadow: "1px 5px 0px #747c7f",
-  border: "2px #000 solid"
+  border: "2px #000 solid",
+  display: "flex",
+  justifyContent: "start"
 
 };
 
@@ -63,10 +65,10 @@ const HamburgerMenuSlider = ({toggleSlider, sliderOpen, ...props}) => {
     <HamburgerSliderDiv>
       <HamburgerSliderMenuDiv sliderOpen={sliderOpen} >
         <span></span>
-        <NavLink style={NavButton} onClick={toggleSlider} to='/portfolio'>Portfolio</NavLink>
-        <NavLink style={NavButton} onClick={toggleSlider} to='/blog'>Blog</NavLink>
-        <NavLink style={NavButton} onClick={toggleSlider} to='/resume'>Resume</NavLink>
-        <NavLink style={NavButton} onClick={toggleSlider} to='/contact'>Contact</NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/portfolio'><span>Portfolio</span></NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/blog'><span>Blog</span></NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/resume'><span>Resume</span></NavLink>
+        <NavLink style={NavButton} onClick={toggleSlider} to='/contact'><span>Contact</span></NavLink>
       </HamburgerSliderMenuDiv>
     </HamburgerSliderDiv>
   )

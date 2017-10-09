@@ -19,15 +19,15 @@ const LatestProjectDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(15%);
+  transform: translateY(25%);
 `;
 
 const Content = (props) => {
   return (
     <ContentDiv>
-      <h1>Software Developer</h1>
-      <h1>Gamer</h1>
-      <h1>Wannabe Polyglot</h1>
+      <h1>- Software Developer -</h1>
+      <h1>- Gamer -</h1>
+      <h1>- Wannabe Polyglot -</h1>
       <LatestProjectDiv>
           <h2>Latest Project</h2>
           <Project project={portfolioData[0]} />
