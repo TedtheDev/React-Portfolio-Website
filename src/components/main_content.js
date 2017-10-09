@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { portfolioData } from '../../data/portfolio';
 import Project from './portfolio_project';
 
-const ContentDiv = styled.div`
+const ContentDiv = styled.section`
   overflow-y: auto;
   width: 100%;
   height: 100%;
@@ -11,6 +11,7 @@ const ContentDiv = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-items: center;
+  align-content: start;
 `;
 
 const LatestProjectDiv = styled.div`

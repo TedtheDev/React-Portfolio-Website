@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import LogoName from './logo_name';
 import NavButtons from './nav_buttons';
 
-const HeaderDiv = styled.div`
+const HeaderDiv = styled.header`
   background: #0094ce;
   grid-area: header;
   display: grid;

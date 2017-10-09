@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ContactDiv = styled.div`
+const ContactDiv = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;

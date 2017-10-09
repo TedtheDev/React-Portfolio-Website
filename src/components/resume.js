@@ -5,6 +5,7 @@ import { resumeData } from '../../data/resume';
 import ResumeSkillsCategory from './resume_skills_category';
 import ResumeExperience from './resume_experience';
 import ResumeEducation from './resume_education';
+
 /**
  * [unCamelCase turn camelcase into english words,
  *  ex foreignLanges = Foreign Languages, frameworks = Frameworks
@@ -27,13 +28,13 @@ function unCamelCase(string) {
   return string.join(''); // return string by joining array
 }
 
-const ResumeDiv = styled.div`
+const ResumeDiv = styled.section`
   overflow-y: auto;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: .1fr .5fr .5fr .5fr;
+  grid-template-rows: auto;
   grid-template-areas:
     "links"
     "resumeSkills"
@@ -42,7 +43,7 @@ const ResumeDiv = styled.div`
 `;
 
 const SkillsDiv = styled.div`
-  grid-area: resumeSkills
+  grid-area: resumeSkills;
   display: grid;
   grid-template-columns: .5fr .5fr .5fr;
   grid-template-rows: .1fr .1fr .1fr;
@@ -53,17 +54,23 @@ const SkillsDiv = styled.div`
 `;
 
 const LinksDiv = styled.div`
-  grid-area: links;
-  grid-column: 1 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "linksHeading linksHeading"
+    "linkedIn github";
+  justify-content: start;
 `
+
 const Resume = (props) => {
   return(
     <ResumeDiv>
-      <div>
-        <h4>Links</h4>
-        <div><a href={resumeData.linkedInLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-linkedin" aria-hidden="true"></i></a>{resumeData.linkedInUsername}</div>
-        <div><a href={resumeData.gitHubLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-github" aria-hidden="true"></i></a>{resumeData.gitHubUsername}</div>
-      </div>
+      <LinksDiv>
+        <h3 style={{gridArea:""}}>Links</h3>
+        <div style={{gridArea:"linkedIn"}}><a href={resumeData.linkedInLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-linkedin" aria-hidden="true"></i></a>{resumeData.linkedInUsername}</div>
+        <div style={{gridArea:"github"}}><a href={resumeData.gitHubLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-github" aria-hidden="true"></i></a>{resumeData.gitHubUsername}</div>
+      </LinksDiv>
       <SkillsDiv>
         <h2 style={{grid:"skills", gridColumn: "1 / span 3" }}>Skills</h2>
         {

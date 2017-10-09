@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { portfolioData } from '../../data/portfolio';
 import Project from './portfolio_project';
 
-const PortfolioDiv = styled.div`
+const PortfolioDiv = styled.section`
   width: 100%;
   height: 100%;
   grid-area: content;

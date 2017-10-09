@@ -12,7 +12,7 @@ export const resumeData = {
       'Bootstrap','SASS','Stylus','jQuery','GraphQL','Dojo','Jade/Pug','IBM BPM'
     ],
     technologies: [
-      'Git','npm','Heroku','OpenShift','WordPress','Joomla'
+      'Git','npm','Docker','Heroku','OpenShift','WordPress','Joomla'
     ],
     databases: [
       'MongoDB','Oracle','MySQL'

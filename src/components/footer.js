@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FooterDiv = styled.div`
+const FooterDiv = styled.footer`
   grid-area: footer;
   background: #0094ce;
 `;

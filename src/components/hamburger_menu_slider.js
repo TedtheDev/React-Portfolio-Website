@@ -8,7 +8,7 @@ const HamburgerSliderDiv = styled.div`
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 120%;
     height:100%;
     overflow: hidden;
     pointer-events: none;
@@ -29,18 +29,16 @@ const HamburgerSliderDiv = styled.div`
     }
 `;
 
-const HamburgerSliderMenuDiv = styled.div`
+const HamburgerSliderMenuDiv = styled.nav`
     z-index: 2;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 3% auto;
+    grid-template-columns: 90%;
+    grid-template-rows: 5% auto;
     grid-row-gap: 15px;
     justify-items: center;
     align-items: center;
     align-content: start;
-    position: relative;
     max-width: 30%;
-    width: 90%;
     height: 100%;
     pointer-events: auto;
     transform: translateX(${props => props.sliderOpen ? 'none' : '-100%'});
