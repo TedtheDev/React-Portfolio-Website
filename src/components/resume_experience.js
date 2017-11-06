@@ -14,8 +14,12 @@ const ResumeExperience = ({experience, ...props}) => {
       <h2>Experience</h2>
       <div>
         {
-          experience.map((position, index) => {
-            return <Position key={index} position={position} />
+          experience.map((position, index, array) => {
+            if(index !== array.length - 1) {
+              return <div style={{marginBottom:"4%"}}><Position key={index} position={position} /></div>
+            } else {
+              return <Position key={index} position={position} />
+            }
           })
         }
       </div>

@@ -8,7 +8,7 @@ export const resumeData = {
   skills: {
     languages: ['JavaScript (ES6)','CSS3', 'HTML5','SQL', 'PHP','Java'],
     frameworks: [
-      'React', 'Redux','NodeJS','ExpressJS','Mocha','Webpack','Angular','MaterialUI',
+      'React', 'Redux','Node.js','Express.js','Mocha','Webpack','Angular','MaterialUI',
       'Bootstrap','SASS','Stylus','jQuery','GraphQL','Dojo','Jade/Pug','IBM BPM'
     ],
     technologies: [

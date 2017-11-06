@@ -48,34 +48,61 @@ const SkillsDiv = styled.div`
   grid-template-columns: .5fr .5fr .5fr;
   grid-template-rows: .1fr .1fr .1fr;
   grid-template-areas:
-    "skills skills skills"
-    "21 22 23"
-    "31 32 33"
+    "skills . ."
+    "frameworks languages technologies"
+    ". databases foreignLanguages"
 `;
 
 const LinksDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
     "linksHeading linksHeading"
     "linkedIn github";
-  justify-content: start;
-`
+`;
+
+const Link = styled.div`
+  display: grid;
+  grid-template-columns: .2fr minmax(auto, .1fr) 1fr;
+  grid-template-rows: 1fr;
+`;
+
+const linkGridArea1 = {
+  gridArea: "1 / 2 / 1 / 3"
+};
+
+const linkGridArea2 = {
+  gridArea: "1 / 3 / 1 / 4"
+};
 
 const Resume = (props) => {
   return(
     <ResumeDiv>
       <LinksDiv>
-        <h3 style={{gridArea:""}}>Links</h3>
-        <div style={{gridArea:"linkedIn"}}><a href={resumeData.linkedInLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-linkedin" aria-hidden="true"></i></a>{resumeData.linkedInUsername}</div>
-        <div style={{gridArea:"github"}}><a href={resumeData.gitHubLink} target="_blank" rel="noreferrer noopener"><i className="fa fa-github" aria-hidden="true"></i></a>{resumeData.gitHubUsername}</div>
+        <h2>Links</h2>
+        <Link style={{gridArea:"linkedIn"}}>
+          <a style={linkGridArea1} href={resumeData.linkedInLink} target="_blank" rel="noreferrer noopener">
+            <i className="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <div style={linkGridArea2}>
+            {resumeData.linkedInUsername}
+          </div>
+        </Link>
+        <Link style={{gridArea:"github"}}>
+          <a style={linkGridArea1} href={resumeData.gitHubLink} target="_blank" rel="noreferrer noopener">
+            <i className="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <div style={linkGridArea2} >
+            {resumeData.gitHubUsername}
+          </div>
+        </Link>
       </LinksDiv>
       <SkillsDiv>
-        <h2 style={{grid:"skills", gridColumn: "1 / span 3" }}>Skills</h2>
+        <h2 style={{gridArea:"skills"}}>Skills</h2>
         {
           Object.keys(resumeData.skills).map((category,index) => {
-            return <ResumeSkillsCategory key={index} category={unCamelCase(category)} skills={resumeData.skills[category]}/>
+              return <div style={{gridArea:`${category}`}}><ResumeSkillsCategory key={index} category={unCamelCase(category)} skills={resumeData.skills[category]}/></div>
           })
         }
       </SkillsDiv>

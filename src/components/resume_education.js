@@ -7,10 +7,10 @@ const EducationDiv = styled.div`
     grid-area: education;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .1fr .1fr .1fr .1fr;
+    grid-template-rows: .1fr .1fr .1fr;
     grid-template-areas:
       "educationTitle educationTitle educationTitle"
-      "location college timePeriod"
+      "college location timePeriod"
       "degree secondaryMajor minor"
       "studyAbroad studyAbroad studyAbroad"
 `;
@@ -20,9 +20,9 @@ const ResumeEducation = ({ education, ...props }) => {
   return (
     <EducationDiv>
       <h2 style={{gridArea:"educationTitle"}}>Education</h2>
-      <div style={{gridArea:"college"}}>{collegeName}</div>
-      <div style={{gridArea:"location"}}>{location}</div>
-      <div style={{gridArea:"timePeriod"}}>{timePeriod}</div>
+      <div style={{gridArea:"college"}}><strong>{collegeName}</strong></div>
+      <div style={{gridArea:"location"}}><strong>{location}</strong></div>
+      <div style={{gridArea:"timePeriod"}}><strong>{timePeriod}</strong></div>
       <div style={{gridArea:"degree"}}>{degree}</div>
       <div style={{gridArea:"secondaryMajor"}}>Secondary Major: {secondaryMajor}</div>
       <div style={{gridArea:"minor"}}>Minor: {minor}</div>
@@ -30,9 +30,9 @@ const ResumeEducation = ({ education, ...props }) => {
         {
           studyAbroad.map((abroad, index) => {
             if(index !== studyAbroad.length - 1) {
-              return <span key={index}>{abroad.location},{abroad.timePeriod};</span>
+              return <span key={index}>{abroad.location}, {abroad.timePeriod}; </span>
             } else {
-              return <span key={index}>{abroad.location},{abroad.timePeriod}</span>
+              return <span key={index}>{abroad.location}, {abroad.timePeriod}</span>
             }
           })
         }
