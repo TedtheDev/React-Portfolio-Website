@@ -36,8 +36,8 @@ jobs:
       # run tests!
       - run: npm test
   
-  deployment:
-    staging:
-      branch: master
-      heroku:
-        appname: tyleredmunds
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: tyleredmunds
