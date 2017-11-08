@@ -14,8 +14,8 @@ const BlogPostDiv = styled.div`
 const BlogPost = (props) => {
   return (
     <BlogPostDiv>
-      <div style={{gridArea:"title",fontSize:"1.5rem"}}>{props.post.title}</div>
-      <div style={{gridArea:"date",fontSize:"1.1rem"}}>{props.post.date}</div>
+      <div style={{gridArea:"title",fontSize:"1.5rem",justifySelf:"start",alignSelf:"center"}}>{props.post.title}</div>
+      <div style={{gridArea:"date",fontSize:"1.1rem",justifySelf:"center",alignSelf:"center"}}>{props.post.date}</div>
       <div style={{gridArea:"content"}}>{props.post.content}</div>
     </BlogPostDiv>
   )

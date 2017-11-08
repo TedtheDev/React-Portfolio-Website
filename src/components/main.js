@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import MainContent from './main_content';
-import Blog from './blog';
+import BlogWrapper from './blog_wrapper';
 import Resume from './resume';
 import Contact from './contact';
 import Portfolio from './portfolio';
@@ -24,7 +24,7 @@ const Main = (props) => {
         <Switch>
           <Route exact path="/" component={MainContent} />
           <Route exact path="/portfolio" component={Portfolio} />
-          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/blog" component={BlogWrapper} />
           <Route exact path="/resume" component={Resume} />
           <Route exact path="/contact" component={Contact} />
         </Switch>

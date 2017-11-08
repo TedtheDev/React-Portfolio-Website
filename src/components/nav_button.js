@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 
 const Button = styled.button`
   background: #6ccff6;
-  border: none;
   padding: 10px;
   font-size: 1.3rem;
   border: 2px #000c11 solid;
