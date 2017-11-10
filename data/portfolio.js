@@ -12,28 +12,28 @@ export const portfolioData = [
    projectName: 'React Portfolio Website',
    liveLink: 'https://tyleredmunds.herokuapp.com',
    github: 'https://github.com/TedtheDev/react-portfolio-website',
-   description: 'A portfolio website to show my projects, blog about my progress, show my resume, and list contact information',
+   description: 'A portfolio website to show my projects, blog about my progress, show my resume, and list contact information.',
    technologiesUsed: ['React', 'styled-components','Webpack','JavaScript', 'Node.js','Express']
  },
  {
    projectName: 'Angular Website',
    liveLink: 'https://website-tyleredmunds.herokuapp.com',
    github: 'https://github.com/TedtheDev/new-node',
-   description: 'A portfolio site to showcase my work, tell a little bit about me, and share contact information.',
+   description: 'A portfolio site to showcase my work, tell a little bit about myself, and share contact information.',
    technologiesUsed: ['Angular', 'HTML5','CSS3', 'Node.js', 'Express', 'Jade/Pug']
  },
  {
    projectName: 'Basic CRUD GraphQL App',
    liveLink: 'https://quiet-refuge-22498.herokuapp.com/graphql',
    github: 'https://github.com/TedtheDev/Scaphold-Test',
-   description: 'A GraphQL that uses two datasources (MongoDB and Wargaming API for World of Tanks) to map player username and favorite tank statistics.',
+   description: 'A GraphQL app that uses two data sources (MongoDB and Wargaming API for World of Tanks) to map player username and favorite tank statistics.',
    technologiesUsed: ['GraphQL', 'MongoDB','Express', 'Node.js','JavaScript']
  },
  {
    projectName: 'Java CLI Payroll System',
    liveLink: '',
    github: 'https://github.com/TedtheDev/MIS331Project',
-   description: 'This was my class final project to develop a command line interfaced payroll system. A user can enter new/edit/delete employes, update their hours worked, and print paychecks for the 2 week period.',
+   description: 'This was my class final project to develop a command line interface payroll system. A user can enter new/edit/delete employees, update their hours worked, and print paychecks for the 2 week period.',
    technologiesUsed: ['Java']
  }
 ];
