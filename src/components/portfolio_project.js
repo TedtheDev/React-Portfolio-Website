@@ -24,12 +24,22 @@ const ProjectHeading = styled.div`
     }
 `;
 
+const liveLink = (link) => {
+  if(link !== '') {
+    return <a href={link} target="_blank" rel="noopener noreferrer"><i className="fa fa-desktop fa-2x" aria-hidden="true"></i></a>
+  } else {
+    return <div></div>
+  }
+};
+
 const Project = (props) => {
   return (
     <ProjectDiv>
       <ProjectHeading>
         <div style={{fontSize:"1.3rem",marginRight:"2%"}}><strong>{props.project.projectName}</strong></div>
-        <a href={props.project.liveLink} target="_blank" rel="noopener noreferrer"><i className="fa fa-desktop fa-2x" aria-hidden="true"></i></a>
+        {
+          liveLink(props.project.liveLink)
+        }
         <a href={props.project.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
       </ProjectHeading>
       <div>{props.project.description}</div>

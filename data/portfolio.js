@@ -10,14 +10,14 @@ export const portfolioData = [
  },
  {
    projectName: 'React Portfolio Website',
-   liveLink: 'insert link here',
+   liveLink: 'https://tyleredmunds.herokuapp.com',
    github: 'https://github.com/TedtheDev/react-portfolio-website',
    description: 'A portfolio website to show my projects, blog about my progress, show my resume, and list contact information',
    technologiesUsed: ['React', 'styled-components','Webpack','JavaScript', 'Node.js','Express']
  },
  {
    projectName: 'Angular Website',
-   liveLink: 'https://website-tyleredmunds.rhcloud.com',
+   liveLink: 'https://website-tyleredmunds.herokuapp.com',
    github: 'https://github.com/TedtheDev/new-node',
    description: 'A portfolio site to showcase my work, tell a little bit about me, and share contact information.',
    technologiesUsed: ['Angular', 'HTML5','CSS3', 'Node.js', 'Express', 'Jade/Pug']
@@ -31,7 +31,7 @@ export const portfolioData = [
  },
  {
    projectName: 'Java CLI Payroll System',
-   liveLink: 'link code here',
+   liveLink: '',
    github: 'https://github.com/TedtheDev/MIS331Project',
    description: 'This was my class final project to develop a command line interfaced payroll system. A user can enter new/edit/delete employes, update their hours worked, and print paychecks for the 2 week period.',
    technologiesUsed: ['Java']
