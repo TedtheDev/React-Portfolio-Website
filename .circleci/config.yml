@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo
+    working_directory: /app
 
     steps:
       - checkout
@@ -39,7 +39,7 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: docker image tag tedthedev/react-portfolio-website .
+      - run: docker build image -t tedthedev/react-portfolio-website .
   
 deployment:
   staging:
