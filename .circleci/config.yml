@@ -39,7 +39,8 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: docker build -t tedthedev/react-portfolio-website .
+      #build docker image
+      #- run: docker build -t tedthedev/react-portfolio-website .
   
 deployment:
   staging:
