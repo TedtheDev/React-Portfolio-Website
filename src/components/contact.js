@@ -3,8 +3,14 @@ import styled from 'styled-components';
 
 const ContactDiv = styled.section`
   display: grid;
-  grid-template-columns: 1fr;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 100%;
   grid-template-rows: auto;
+  grid-row-gap: 2%;
+  align-content: start;
+  justify-conent: center;
+  margin-top: 5%;
 `;
 
 const ContactItemDiv = styled.div`
@@ -15,20 +21,22 @@ const ContactItemDiv = styled.div`
   align-items: center;
 `;
 
-const HorizontalLine = styled.hr`
+const HorizontalLine = styled.div`
   width: 100%;
+  height: 2px;
+  background: #6CCFF6;
 `;
 
 const Contact = (props) => {
   return(
     <ContactDiv>
       <ContactItemDiv>
-        <a href="https://www.linkedin.com/in/tyler-edmunds" target="_blank" rel="noreferrer noopener"><i className="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+        <a style={{textDecoration:"none",color:"#000c11"}} href="https://www.linkedin.com/in/tyler-edmunds" target="_blank" rel="noreferrer noopener"><i className="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
         <div style={{fontSize:"1.2rem"}}>Tyler Edmunds</div>
       </ContactItemDiv>
       <HorizontalLine />
       <ContactItemDiv>
-        <a href="mailto:tylerjedmunds@gmail.com?subject=Contacting%20You%20From%20Your%20Website" rel="noreferrer noopener"><i className="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
+        <a style={{textDecoration:"none",color:"#000c11"}} href="mailto:tylerjedmunds@gmail.com?subject=Contacting%20You%20From%20Your%20Website" rel="noreferrer noopener"><i className="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
         <div style={{fontSize:"1.2rem"}}>tylerjedmunds@gmail.com</div>
       </ContactItemDiv>
     </ContactDiv>

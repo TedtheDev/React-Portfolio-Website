@@ -14,25 +14,26 @@ const BlogScrollDiv = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
-    grid-row-gap: 5%;
+    grid-row-gap: 2%;
+    align-content: start;
 `;
 
 const PagesNavDiv = styled.div`
   display: grid;
-  grid-template: 1fr / repeat(${Math.ceil(blogData.length / 2)}, 3%);
+  grid-template: 1fr / repeat(${Math.ceil(blogData.length / 2)}, minmax(15px, 5%));
   justify-items: center;
   grid-column-gap: 2%;
-  margin-top: 2%;
+  margin: 2% 0;
 `;
 
 const PageNumberDiv = styled.div`
   background: #6ccff6;
-  padding: .5rem;
   border: 2px #000c11 solid;
   color: #000c11;
   cursor: pointer;
+  min-width: 1rem;
 `;
 
 const mapPages = (props) => {
