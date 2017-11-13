@@ -4,7 +4,6 @@ import { portfolioData } from '../../data/portfolio';
 import Project from './portfolio_project';
 
 const ContentDiv = styled.section`
-  overflow-y: auto;
   width: 100%;
   height: 100%;
   display: grid;

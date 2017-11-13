@@ -20,7 +20,7 @@ const AppStyled = styled.div`
   grid-template-rows: 1fr 80% 1fr;
   grid-template-areas:
     "header"
-    "app "
+    "app"
     "footer";
 `;
 
@@ -37,6 +37,7 @@ class App extends Component {
     const isOpen = (this.state.sliderOpen) ? false : true;
     this.setState({sliderOpen: isOpen})
   }
+
   render() {
     return (
       <Router>

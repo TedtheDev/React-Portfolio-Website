@@ -7,7 +7,6 @@ const PortfolioDiv = styled.section`
   width: 100%;
   height: 100%;
   grid-area: content;
-  overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;

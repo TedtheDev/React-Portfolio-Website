@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import Blog from './blog';
+
+const BlogWrapperDiv = styled.section`
+    width: 100%;
+    height: 100%;
+`;
 
 class BlogWrapper extends Component {
     constructor(props) {
@@ -20,11 +26,13 @@ class BlogWrapper extends Component {
 
     render() {
         return (
-            <Blog 
-                changeBlogPosts={this.changeBlogPosts} 
-                pageSelected={this.state.pageSelected} 
-                blogPostsToShow={this.state.blogPostsToShow}
-            />
+            <BlogWrapperDiv>
+                <Blog 
+                    changeBlogPosts={this.changeBlogPosts} 
+                    pageSelected={this.state.pageSelected} 
+                    blogPostsToShow={this.state.blogPostsToShow}
+                />
+            </BlogWrapperDiv>
         )
     }
 };

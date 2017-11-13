@@ -14,7 +14,10 @@ const MainWrapper = styled.div`
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 100%;
   grid-template-areas:
-    ". content ."
+    ". content .";
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 `;
 
 const Main = (props) => {

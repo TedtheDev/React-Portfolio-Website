@@ -1,31 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const LogoNameWrapper = styled.div`
   grid-area: logo;
   justify-self: start;
   align-self: center;
-`
-
-const LogoStyle = styled.div`
-  cursor: pointer;
-  text-decoration: none;
 `;
 
-const LinkStyle = {
+const linkStyle = {
   textDecoration: 'none',
-  fontSize: '2.5rem'
+  fontSize: '2.5rem',
+  color:"#fcfeff"
 };
 
 const LogoName = (props) => {
   return (
     <LogoNameWrapper>
-      <NavLink style={LinkStyle} to="/">
-        <LogoStyle>
+      <Link style={linkStyle} to="/">
           Tyler Edmunds
-        </LogoStyle>
-      </NavLink>
+      </Link>
     </LogoNameWrapper>
   )
 };

@@ -16,7 +16,7 @@ const ResumeExperience = ({experience, ...props}) => {
         {
           experience.map((position, index, array) => {
             if(index !== array.length - 1) {
-              return <div style={{marginBottom:"4%"}}><Position key={index} position={position} /></div>
+              return <div key={index} style={{marginBottom:"4%"}}><Position position={position} /></div>
             } else {
               return <Position key={index} position={position} />
             }

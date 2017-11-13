@@ -29,7 +29,6 @@ function unCamelCase(string) {
 }
 
 const ResumeDiv = styled.section`
-  overflow-y: auto;
   width: 100%;
   height: 100%;
   display: grid;
@@ -102,7 +101,7 @@ const Resume = (props) => {
         <h2 style={{gridArea:"skills"}}>Skills</h2>
         {
           Object.keys(resumeData.skills).map((category,index) => {
-              return <div style={{gridArea:`${category}`}}><ResumeSkillsCategory key={index} category={unCamelCase(category)} skills={resumeData.skills[category]}/></div>
+              return <div key={index} style={{gridArea:`${category}`}}><ResumeSkillsCategory key={index} category={unCamelCase(category)} skills={resumeData.skills[category]}/></div>
           })
         }
       </SkillsDiv>
