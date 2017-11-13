@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import GitHubLogoPNG from '../../assets/GitHub-Mark-120px-plus.png';
 
 const ProjectDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   &:not(:last-child)::after {
     position: relative;
     content: "";
@@ -27,9 +28,14 @@ const ProjectHeading = styled.div`
     }
 `;
 
+const linkNoDecoration = {
+  textDecoration:"none",
+  color:"#000c11"
+};
+
 const liveLink = (link) => {
   if(link !== '') {
-    return <a href={link} target="_blank" rel="noopener noreferrer"><i className="fa fa-desktop fa-2x" aria-hidden="true"></i></a>
+    return <a style={linkNoDecoration} href={link} target="_blank" rel="noopener noreferrer"><i className="fa fa-desktop fa-2x" aria-hidden="true"></i></a>
   } else {
     return <div></div>
   }
@@ -43,7 +49,9 @@ const Project = (props) => {
         {
           liveLink(props.project.liveLink)
         }
-        <a href={props.project.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        <a style={linkNoDecoration} href={props.project.github} target="_blank" rel="noopener noreferrer">
+          <img src={GitHubLogoPNG} width="32px" height="32px" alt="GitHub Repo" />
+        </a>
       </ProjectHeading>
       <div>{props.project.description}</div>
       <p>
