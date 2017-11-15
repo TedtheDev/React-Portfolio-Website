@@ -6,16 +6,18 @@ import { NavLink } from 'react-router-dom';
 const Button = styled.button`
   background: #6ccff6;
   padding: 10px;
-  font-size: 1.3rem;
-  border: 2px #000c11 solid;
+  font-size: 1.2rem;
+  border: 3px #000c11 solid;
+  border-radius: 5px;
   cursor: pointer;
   color: #000c11;
+  width: 100%;
 `
 
-const NavButton = (props) => {
+const NavButton = ({buttonText, to, ...props}) => {
   return (
-    <NavLink to={props.to}>
-      <Button>{props.buttonText}</Button>
+    <NavLink style={{minWidth:"30%"}} to={to}>
+      <Button>{buttonText}</Button>
     </NavLink>
   )
 };

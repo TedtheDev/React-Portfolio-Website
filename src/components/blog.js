@@ -29,18 +29,23 @@ const PagesNavDiv = styled.div`
 `;
 
 const PageNumberDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
   background: #6ccff6;
   border: 2px #000c11 solid;
+  border-radius: 5px;
+  box-shadow: 4px 5px 0px rgb(116, 124, 127);
   color: #000c11;
   cursor: pointer;
-  min-width: 1rem;
+  min-width: 1.2rem;
 `;
 
 const mapPages = (props) => {
   const pages = [];
 
   for(let i = 0; i < Math.ceil(blogData.length / 2); i++) {
-    pages.push(<PageNumberDiv key={i} onClick={() => props.changeBlogPosts(i)}>{i + 1}</PageNumberDiv>);
+    pages.push(<PageNumberDiv key={i} onClick={() => props.changeBlogPosts(i)}><div>{i + 1}</div></PageNumberDiv>);
   }
   return pages;
 };

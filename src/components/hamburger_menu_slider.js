@@ -53,8 +53,9 @@ const NavButton = {
   height: "100%",
   width: "90%",
   color: "#fcfeff",
-  boxShadow: "1px 5px 0px #747c7f",
+  boxShadow: "5px 5px 0px #747c7f",
   border: "2px #000 solid",
+  borderRadius: "5px",
   display: "flex",
   justifyContent: "start"
 
