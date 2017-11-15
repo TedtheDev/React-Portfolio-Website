@@ -14,6 +14,7 @@ const HamburgerSliderDiv = styled.div`
     pointer-events: none;
 
     &:after {
+      z-index: -1;
       content: '';
       display: block;
       position: absolute;
@@ -22,9 +23,9 @@ const HamburgerSliderDiv = styled.div`
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.4);
-      opacity: 0;
+      pointer-events: ${props => props.sliderOpen ? 'all' : 'none'};
+      opacity: ${props => props.sliderOpen ? '.9' : '0'};
       will-change: opacity;
-      pointer-events: none;
       transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
     }
 `;
@@ -63,7 +64,7 @@ const NavButton = {
 
 const HamburgerMenuSlider = ({toggleSlider, sliderOpen, ...props}) => {
   return (
-    <HamburgerSliderDiv>
+    <HamburgerSliderDiv sliderOpen={sliderOpen} onClick={toggleSlider}>
       <HamburgerSliderMenuDiv sliderOpen={sliderOpen} >
         <span></span>
         <NavLink style={NavButton} onClick={toggleSlider} to='/portfolio'><span>Portfolio</span></NavLink>
