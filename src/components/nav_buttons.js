@@ -14,18 +14,20 @@ const NavDiv = styled.nav`
   align-items: center;
   justify-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     justify-items: end;
   }
 `;
 
 const ButtonsDiv = styled.div`
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  position: relative;
+  top: 1vh;
+  grid-template-columns: repeat(4,auto);
   grid-template-rows: 1fr;
   grid-column-gap: 2%;
   align-items: center;
-  justify-items: space-around;
+  justify-items: center;
   width: 100%;
 
   @media (max-width: 800px) {

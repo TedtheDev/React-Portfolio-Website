@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Button = styled.button`
-  background: #6ccff6;
-  padding: 10px;
-  font-size: 1.2rem;
-  border: 3px #000c11 solid;
-  border-radius: 5px;
+  font-size: 2vw;
+  background: none;
+  padding-bottom: 3px;
+  border: none;
+  border-bottom: 3px solid transparent;
   cursor: pointer;
-  color: #000c11;
-  width: 100%;
-`
+  color: rgb(252, 254, 255);
+  &:hover {
+    border-bottom: .3vw solid rgb(252, 254, 255);
+  }
+`;
 
 const NavButton = ({buttonText, to, ...props}) => {
   return (
-    <NavLink style={{minWidth:"30%"}} to={to}>
+    <NavLink to={to}>
       <Button>{buttonText}</Button>
     </NavLink>
   )

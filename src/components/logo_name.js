@@ -10,7 +10,7 @@ const LogoNameWrapper = styled.div`
 
 const linkStyle = {
   textDecoration: 'none',
-  fontSize: '2.5rem',
+  fontSize: '4vw',
   color:"#fcfeff"
 };
 
