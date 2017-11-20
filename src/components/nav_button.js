@@ -18,7 +18,7 @@ const Button = styled.button`
 
 const NavButton = ({buttonText, to, ...props}) => {
   return (
-    <NavLink to={to}>
+    <NavLink activeStyle={{borderBottom:".3vw solid rgb(252, 254, 255)"}}to={to}>
       <Button>{buttonText}</Button>
     </NavLink>
   )
