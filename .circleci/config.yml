@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build-job:
     docker:
       # specify the version you desire here
       - image: circleci/node:latest
@@ -26,6 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      #install node dependencies
       - run: npm install
 
       - save_cache:
@@ -33,17 +34,37 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run build
+      # run build (prod) and test
       - run: npm run build
 
-      # run tests!
-      - run: npm test
-
       #build docker image
-      #- run: docker build -t tedthedev/react-portfolio-website .
-  
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: tyleredmunds
+      - run: docker build -t tedthedev/react-portfolio-website:latest .
+      #push to dockerhub
+      - run: docker push tedthedev/react-portfolio-website:latest
+
+
+  deploy-job:
+    working_directory: ~/app  
+    steps:
+      - run:
+          name: Run setup script
+          command: bash .circleci/setup-heroku.sh
+      - add_ssh_keys:
+          fingerprints:
+            - "0a:6f:cc:a6:4a:d4:76:6d:4e:25:b6:62:85:76:1b:3b"
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            heroku container:push web
+
+  workflows:
+    version: 2
+    build-deploy:
+      jobs:
+        - build-job
+        - deploy-job:
+            requires:
+              - build-job
+            filters:
+              branches:
+                only: master
