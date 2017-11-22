@@ -32,7 +32,9 @@ jobs:
       - run: docker build -t tedthedev/react-portfolio-website:latest .
       #push to dockerhub
       - run: docker push tedthedev/react-portfolio-website:latest
-  deploy:
+  deploy-app:
+    docker:
+      - image: tedthedev/react-portfolio-website:latest
     working_directory: ~/app  
     steps:
       - run:
