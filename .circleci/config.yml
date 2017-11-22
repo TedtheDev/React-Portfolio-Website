@@ -43,8 +43,11 @@ jobs:
       - run: docker push tedthedev/react-portfolio-website:latest
 
   deploy:
+
     working_directory: ~/app  
     steps:
+      - checkout
+      
       # run circleci script to connect to heroku
       - run:
           name: Run setup script
