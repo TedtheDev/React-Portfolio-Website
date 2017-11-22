@@ -8,65 +8,50 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:latest
-
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
-
     working_directory: ~/app
-
     steps:
-
       # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
       #install node dependencies
       - run: npm install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
       # run build (prod) and test
       - run: npm build
-      - run: npm test
       #build docker image
       - run: docker build -t tedthedev/react-portfolio-website:latest .
       #push to dockerhub
       - run: docker push tedthedev/react-portfolio-website:latest
-
-  deploy-app:
-
+  deploy:
     working_directory: ~/app  
     steps:
-
-      # run circleci script to connect to heroku
       - run:
           name: Run setup script
           command: bash .circleci/setup-heroku.sh
-
-      #add ssh keys to environment to verify access
       - add_ssh_keys:
           fingerprints:
             - "0a:6f:cc:a6:4a:d4:76:6d:4e:25:b6:62:85:76:1b:3b"
       - run:
           name: Deploy container image to Heroku
           command: heroku container:push web
-
-  workflows:
-    version: 2
-    build_and_deploy:
-      jobs:
-        - build
-        - deploy-app:
-            requires:
-              - build
-            filters:
-              branches:
-                only: master
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy-app:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
