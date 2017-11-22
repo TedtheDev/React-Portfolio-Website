@@ -14,6 +14,7 @@ jobs:
       # - image: circleci/mongo:3.4.4
     working_directory: ~/app
     steps:
+      - checkout
       # Download and cache dependencies
       - restore_cache:
           keys:
