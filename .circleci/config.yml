@@ -29,8 +29,11 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       # run build (prod) and test
       - run: npm build
+      # setup docker instance for building and pushing
+      - setup_remote_docker
       #build docker image
       - run: docker build -t tedthedev/react-portfolio-website:latest .
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
       #push to dockerhub
       - run: docker push tedthedev/react-portfolio-website:latest
   deploy-app:
