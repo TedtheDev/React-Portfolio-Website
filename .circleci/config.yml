@@ -27,6 +27,21 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      # run tests
+      - run: npm test
+  deploy-app:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/app  
+    steps:
+      - checkout
+      - run:
+          name: Run setup script
+          command: bash .circleci/setup-heroku.sh
+      - add_ssh_keys:
+          fingerprints:
+            - "0a:6f:cc:a6:4a:d4:76:6d:4e:25:b6:62:85:76:1b:3b"
+      - setup_remote_docker
       # run build (prod) and test
       - run: npm build
       # setup docker instance for building and pushing
@@ -36,17 +51,6 @@ jobs:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
       #push to dockerhub
       - run: docker push tedthedev/react-portfolio-website:latest
-  deploy-app:
-    docker:
-      - image: tedthedev/react-portfolio-website:latest
-    working_directory: ~/app  
-    steps:
-      - run:
-          name: Run setup script
-          command: bash .circleci/setup-heroku.sh
-      - add_ssh_keys:
-          fingerprints:
-            - "0a:6f:cc:a6:4a:d4:76:6d:4e:25:b6:62:85:76:1b:3b"
       - run:
           name: Deploy container image to Heroku
           command: heroku container:push web
