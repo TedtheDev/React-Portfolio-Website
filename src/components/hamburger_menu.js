@@ -10,16 +10,16 @@ const HamburgerMenuWrapper = styled.div`
 `;
 
 const HamburgerDiv = styled.div`
-  width: 75px;
-  height: 8px;
+  width: 10vw;
+  height: 1vw;
   border-radius: 10px;
   background: #fcfeff;
   cursor: pointer;
 
   &::before {
     position: absolute;
-    width: 75px;
-    height: 8px;
+    width: 10vw;
+    height: 1vw;
     border-radius: 10px;
     background: #fcfeff;
     content: "";
@@ -30,8 +30,8 @@ const HamburgerDiv = styled.div`
 
   &::after {
     position: absolute;
-    width: 75px;
-    height: 8px;
+    width: 10vw;
+    height: 1vw;
     border-radius: 10px;
     background: #fcfeff;
     content: "";

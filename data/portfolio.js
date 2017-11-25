@@ -3,7 +3,7 @@ export const portfolioData = [
    projectName: 'Tic Tac Toe with Socket.io',
    liveLink: 'https://tic-tac-toe-socketio.herokuapp.com/',
    github: 'https://github.com/TedtheDev/Tic-Tac-Toe',
-   description: 'Play tic tac toe with your friends! Create an account via email verification and start playing the computer or your friends. You can send chat messages and see your stats/progress as well as see the best players on the leaderboards.',
+   description: 'Play tic tac toe with your friends! Create an account and start playing against an easy bot or your friends. You can send chat messages and see your stats/progress as well as see the best players on the leaderboards.',
    technologiesUsed: [
      'React', 'Redux','MaterialUI','Node.js','SASS', 'Webpack', 'JavaScript(ES6)', 'JSON Web Tokens'
    ]
