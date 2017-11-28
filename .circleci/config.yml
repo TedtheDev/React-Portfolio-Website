@@ -41,7 +41,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "0a:6f:cc:a6:4a:d4:76:6d:4e:25:b6:62:85:76:1b:3b"
-      - setup_remote_docker
       # run build (prod) and test
       - run: npm build
       # setup docker instance for building and pushing
