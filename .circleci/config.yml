@@ -52,7 +52,10 @@ jobs:
       - run: docker push tedthedev/react-portfolio-website:latest
       - run:
           name: Deploy container image to Heroku
-          command: heroku container:push web
+          command: |
+            - docker login --email=$HEROKU_LOGIN --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
+            - docker build --rm=false -t registry.heroku.com/tyleredmunds/web:latest .
+            - docker push registry.heroku.com/tyleredmunds/web:latest
 workflows:
   version: 2
   build_and_deploy:
