@@ -54,7 +54,7 @@ jobs:
           fingerprints:
             - "0a:6f:cc:a6:4a:d4:76:6d:4e:25:b6:62:85:76:1b:3b"
       # run build (prod) and test
-      - run: npm build
+      - run: npm run-script build
       # setup docker instance for building and pushing
       - setup_remote_docker
       #build docker image
