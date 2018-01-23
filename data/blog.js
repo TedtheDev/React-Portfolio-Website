@@ -1,4 +1,29 @@
-export const blogData = [
+export const blogData = [ 
+  {
+    title: "Email Service for Tic Tac Toe - UPDATE",
+    date: "January 9th, 2018",
+    content: "After brushing off the dust and getting back into the groove with my Tic Tac Toe codebase, I created a Mailgun Service that can be reused through my app. I did some testing with it and got an email to send with my new service. I included this in my account controller, got rid of the nodemailer logic, and wired-up Mailgun to be used. I did some final testing through the UI by creating a new account rather than using Postman to test faster and it worked! Next, was to push my changes to master and deploy to production. Deploying to production was a little rusty, because of the cleaning up of links and variables for production. Yes, this is a part I can refactor as I have learned so much more between then and now. I have some ideas that I can do to make deploying to prod much easier. After, some attempts to production, I got a final version and then did one last test. MailgunService failed was the message. NOOO! It didn't work... but after some research, I think I need a custom domain to be able to send emails to any email entered. With the free Mailgun version, I can send up to 5 authorized recipients by manually typing in their emails, but if I get a custom domain and verify, then I can send emails to everyone. Til then, this is still an issue. The good part though is the error says 'MailgunService failed' instead of 'Invalid email'."
+  },
+  {
+    title: "Node.js Course COMPLETED",
+    date: "January 2nd, 2018",
+    content: "About a year ago, I purchased some of my first Udemy courses. That is when an addiction occurred with using Udemy to learn. I love buying 10 dollar courses! One of those courses was Node.js with Anthony Alicea. He goes in deep with node. Not just how to create a node server, but what node is actually doing when you use module.exports and what the require function is doing. I got to learn about the V8 engine, about Joyent, and it is written in C and C++, etc. He went over how Node handles asynchronous code and the event emitter. I also learned about streams, buffers, and chunks, which is something I was never taught, just something that was glossed over. He covered a couple of ways to connect to databases and npm. I also got to go over Express.js again and code along with Anthony by creating a MEAN stack app. This course taught me more about how Node.js works under the hood more than utilizing it to create a backend. Now I totally understand what require is actually doing and it isn't some black magic."
+  },  
+  {
+    title: "A New Email Service for Tic Tac Toe",
+    date: "December 26th, 2017",
+    content: "This issue has been on my list to do for a LONG time. Every time the Tic Tac Toe app tries to send an email, I get an email from Gmail saying 'Someone is trying to use your account!' What really is happening is I am using nodemailer to use a Gmail account and using SMTP through google to send an email. This is important for my app because it sends verification emails to verify that you created your account, but it fails every time because of this stupid message. So I Googled around and I found SendGrid, which after some time, they said my account was marked as spam and I had issues creating a new account. The next option was Mailgun. I created an account and found an npm package 'mailgun-js' and FINALLY got some email sent. That was an awesome turning point, but I needed to get it in production, but it was late so I went to bed. I finally felt I found a solution."
+  },
+  {
+    title: "Angular 4 Tour of Heroes Tutorial",
+    date: "December 12th, 2017",
+    content: "After a couple of weeks, I finally completed the Angular Tour of Heroes Tutorial. I learned more about the angular-cli, components in typescript, the Ng-Module, and what are observables with RxJS. I still don't completely understand how observables work, but I have a better idea now. I enjoy this tutorial, as it made it easy to follow along and start off with simple concepts and get into more complex concepts with the observables and network requests. One thing that I liked about doing this tutorial was thinking more about services. One part of this tutorial is creating the hero service so you can fetch the hero data. This approach turned on a light bulb in my head to think more about services and how you can create them in ANY application. I am going to try and be more service oriented so I can create more modular services that can be reused and easily updated. Overall, Angular 4 wasn't bad and typescript was cool, but I still really enjoy React."
+  },
+  {
+    title: "React Portfolio Website is Live!",
+    date: "November 27th, 2017",
+    content: "After some time, multitasking projects, and changing priorities, I finally felt good about my latest website that showcases my blog and my apps. This new website was fun to build because I learned more about CircleCI, practice creating more modular components, practice more React, use styled-components, and much more. During this project, I really got deep into figuring out CircleCI and a bit of Docker. I made a continuous deployment pipeline where it runs tests on the development branch when pushed to GitHub or when development is merged into master and master is pushed, CircleCI runs tests, builds a Docker image, pushes that to DockerHub, and then also pushes that image to Heroku. That is my favorite part of this website is creating that pipeline. I am very proud of it. Lastly, I want to improve on writing tests, because a hello world test doesn't count as testing. That is my next goal I would like to improve other user experiences on my website."
+  }, 
   {
     title: "Robot App with Ionic and Angular",
     date: 'November 3rd, 2017',
