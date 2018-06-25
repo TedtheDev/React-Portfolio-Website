@@ -15,9 +15,6 @@ const ProjectDiv = styled.div`
     height: 2px;
     background: #6CCFF6;
   }
-  &:first-child {
-    margin-top: 10%;
-  }
 `;
 
 const ProjectHeading = styled.div`

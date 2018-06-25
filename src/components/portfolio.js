@@ -10,7 +10,7 @@ const PortfolioDiv = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  
+  margin: 3% 0;
 `;
 
 const Portfolio = (props) => {
