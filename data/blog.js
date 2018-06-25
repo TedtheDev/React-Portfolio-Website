@@ -1,5 +1,4 @@
-export const blogData = [ 
-  , 
+export const blogData = [
   {
     title: "Truffle cont...",
     date: 'June 17th, 2018',
