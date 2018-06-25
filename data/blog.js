@@ -1,5 +1,35 @@
 export const blogData = [
   {
+    title: "Truffle cont...",
+    date: 'June 17th, 2018',
+    content: "Back in March, I tried helping out Truffle. I haven't gotten to work on that PR in some months. Partly it may be beyond my skills set but a good stretch! I really want to help Truffle. During this time from March until now, my goal was to learn how to create a front end app that interacts with the Ethereum network by using Truffle. So, I follow the Pet Shop challenge and created a front end that interacts with the blockchain. Truffle made it really easy to compile, migrate, deploy, and test your smart contracts. After that, I looked at the repo again and it is now a monorepo. I think switching to a monorepo makes it a lot easier to contribute and make changes. At the beginning of March, it was very hard to understand what was going on and what to do. You had to use Meta and Git together and fork multiple repos to contribute. Now you use Lerna and have one folder with all packages. It was very easy! I started adding my code back into my branch I was working on and got it halfway working of being able to tell Truffle which folder of contracts to compile. It worked! Now I just have to keep working on it."
+  },
+  {
+    title: "Advanced CSS with SASS",
+    date: 'May 20th, 2018',
+    content: "I was tired of my poor CSS skills and wanted to make them better. I bought this Udemy course to learn more advanced techniques, cover Flexbox, CSS Grid, and other techniques for layouts and making cool animations. I felt like my CSS skills were lacking and needed more of a structured course of action. I have learned a lot! It is a long course (28hrs)! The first half is designing a website with SASS and using rem, em, and % for styling. In the course, media queries are covered and some responsive images too. The second half includes using Flexbox and CSS Grid more. I am excited for this course!"
+  },
+  {
+    title: "Weather App Challenge",
+    date: 'April 18th, 2018',
+    content: "I took on a challenge to create a simple weather app. The idea is to enter a city and get the next 5 days of weather. It presents a temperature, type of weather (sunny, cloudy, rain, etc), and give you a little simple graph of the temperature over the course of the day. I used React, Jest, Enzyme, Docker, TravisCI, and more. This was a good challenge as it made me understand more about testing components and looking at the docs for Enzyme. I learned about shallow vs mount render. It is confusing at first, but then over time, I got used to it a little more."
+  },
+  {
+    title: "Open Source - Truffle",
+    date: 'March 11th, 2018',
+    content: "This month, I got looking more at decentralized Apps and Truffle. I have always wanted to contribute to open source projects and get better at coding. Truffle is a development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier. It uses JavaScript to create a command line interface. Looking at the code is really cool! I saw an opportunity and commented on a PR issue to add more functionality. It is a little ambitious, but a good challenge! Perhaps too ambitious at first..."
+  },
+  {
+    title: "The start of the Crypto-Calculator Project",
+    date: 'February 11th, 2018',
+    content: "In January, I had this idea to make a React app to be more of a calculator for totaling up your cryptocurrencies in USD. The goal was to be able to explore Jest and testing more, but also create something useful. It uses Coinmarketcap APIs and SemanticUI."
+  },
+  {
+    title: "Advanced React and Redux",
+    date: 'Janurary 20th, 2018',
+    content: "If you have not noticed, I really love taking Udemy courses to gain skills with some guidance. One of my favorite instructors is Stephen Grider. In January, I started his Advanced React and Redux course. It covers how to create tests for React components using JSDOM and Mocha. After that module, he goes into creating Higher-Order Components, which is great for stuff like creating a protected route or understanding what the connect() function is doing. The last learning module is covering middlewares for Redux. After all three of these, you get to go over a project that involved using these techniques to develop an application."
+  },
+  {
     title: "Robot App with Ionic and Angular",
     date: 'November 3rd, 2017',
     content: "One of our projects with Dev Jams, is to create a mobile app that controls a robot. It is just a simple app for us to explore a fun way of creating something rather than teach each other. The mobile app will feature some directional arrows that will control a robot with wheels to move forward, backward, and turn. It is a very simple idea but can be complex when exploring new technology. For the robot, it has a Raspberry Pi that controls it and will use Python. The mobile app is built using Ionic and Angular. Front and backend will communicate via BluetoothSerial. Right away, we had a challenge because a limited amount of us has experience with controlling a robot via Raspberry Pi and using Ionic and Angular. Prior to starting, I installed the dependencies and follow some simple tutorials on Ionic. I haven't done Angular 2 and above so that was my first challenge. After I got the gist of Angular, I finally created a 4th Tab called 'Settings', but I still didn't fully understand Typescript and how Angular wired everything together. I also ended up finding a Bluetooth tutorial using Angular and BluetoothSerial, where it sets up events such as finding a Bluetooth device and connecting to it as well as the UI with a list of devices and modals. I haven't got to test on an actual phone because I am missing a USB to a USB-C chord to push it to my phone. After doing all this, I realized I need to explore Angular with Angular's Tour of Heroes tutorial."

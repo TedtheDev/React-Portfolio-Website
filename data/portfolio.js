@@ -1,5 +1,23 @@
 export const portfolioData = [
- {
+  {
+    projectName: 'Crypto-Calculator',
+    liveLink: 'https://crypto-calculator-dev.herokuapp.com/',
+    github: 'https://github.com/TedtheDev/Crypto-Calculator',
+    description: 'A calulator to help add up the total amount in USD of your portfolio and each individual coin. Also add how much you have invested total to see a net gain or loss',
+    technologiesUsed: [
+      'React', 'Redux','SemanticUI','Node.js','Styled-Components','Webpack', 'JavaScript(ES6)', 'Jest', 'Enzyme', 'TravisCI', 'Docker'
+    ]
+  },
+  {
+    projectName: 'Weather App Challenge',
+    liveLink: 'https://your-weather-forecast.herokuapp.com/',
+    github: 'https://github.com/TedtheDev/Weather-App',
+    description: 'Five Day Weather forecast app where you enter your city and see the temperature and type of weather for the next 5 days using the OpenWeatherAPI',
+    technologiesUsed: [
+      'React','Node.js','Styled-Components','Webpack', 'JavaScript(ES6)', 'Jest', 'Enzyme', 'TravisCI', 'Docker'
+    ]
+  },
+  {
    projectName: 'Tic Tac Toe with Socket.io',
    liveLink: 'https://tic-tac-toe-socketio.herokuapp.com/',
    github: 'https://github.com/TedtheDev/Tic-Tac-Toe',

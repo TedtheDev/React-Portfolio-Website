@@ -8,8 +8,8 @@ export const resumeData = {
   skills: {
     languages: ['JavaScript (ES6)','CSS3', 'HTML5','SQL', 'PHP','Java'],
     frameworks: [
-      'React', 'Redux','Node.js','Express.js','Mocha','Webpack','Angular','MaterialUI',
-      'Bootstrap','SASS','Stylus','jQuery','GraphQL','Dojo','Jade/Pug','IBM BPM'
+      'React', 'Redux','Node.js','Express.js','Jest','Mocha','Webpack','Angular','MaterialUI',
+      'Bootstrap','SASS','Stylus','jQuery','GraphQL','Dojo','Jade/Pug'
     ],
     technologies: [
       'Git','npm','Docker','Heroku','OpenShift','WordPress','Joomla'
@@ -27,12 +27,16 @@ export const resumeData = {
       employer: 'Caterpillar Inc.',
       timePeriod: 'Dec 2016 - Current',
       duties: [
-        'Design, document, and implement development workflow tools for new DevOps pipeline',
-        'Developed supplier onboarding application to onboard suppliers from 30 days to 14 days',
-        'Added new functionalities to codebase: Excel export, Comment length count, Animated Tooltip',
-        'Designed database tables to handle several different process flows for multiple supplier requests',
-        'Facilitate Dev Jam Friday sessions to about 10 co-workers to learn/explore new technologies',
-        'Serve as Caterpillar Recruiter to Iowa State University'
+        'Created and designed UI screens for a global application (1000+ users) to onboard company suppliers',
+        'Developed new modular front-end components: Export Data to Excel button, Text area with real-time character count, animated tooltip (SVG), animated toggle switch to expand/collapse sections',
+        'Tested UI screens (Unit and End-to-End) to check validation scripts and checked if screens are responsive and cross-browser compatible',
+        'Designed and implemented JavaScript objects to support multiple UI screens to display/capture user data across whole application',
+        'Utilized JavaScript to transform data, manipulate the DOM, bind data to DOM elements, send/retrieve data from databases or web services, and access other localized services within the codebase',
+        'Developed modular and reusable JavaScript functions and services to promote reusability',
+        'Collaborate and participate on an agile team (3+ different teams), in daily standups, sprint planning and review, and retrospective',
+        'Designed Oracle database tables to handle several different types of process workflows within enterprise application',
+        'Started and contributed to an internal wiki for the team to document best practices/standards to onboard new employees',
+        'Facilitate Dev Jam sessions to about 10 co-workers to learn/explore new technologies/libraries, or build fun apps'
       ]
     },
     {
@@ -40,10 +44,9 @@ export const resumeData = {
       employer: 'Caterpillar Inc.',
       timePeriod: 'Jun 2014 - Nov 2016',
       duties: [
-        'Supported 4 applications through a ticket system and communicate to multiple customers of said applications',
-        'Developed resource management tool to handle real-time data vs weekly import using excel',
-        'Created common process application for on-demand customers to spin up a simple process in a couple days',
-        'Designed and implemented customized CSS theme for all applications to support the Caterpillar brand'
+        'Designed a customized CSS theme to promote the Caterpillar brand across three enterprise applications',
+        'Supported four applications through a ticket system and communicated to multiple customers on ticket statuses',
+        'Sole developer for front-end resource management tool to handle real-time data vs weekly data import from excel'
       ]
     },
     {
@@ -51,9 +54,7 @@ export const resumeData = {
       employer: 'Caterpillar Inc.',
       timePeriod: 'May 2013 - Aug 2013',
       duties: [
-        'Developed web application using the LAMP stack (Linux, Apache, MySQL, PHP), CSS, and HTML for 20 end users',
-        'Modeled data between server information and SAP information in one environment of about 475 servers',
-        'Configured Linux server with Apache and SSL on internal network'
+        'Developed a dynamic web application using JavaScript, AJAX requests, CSS, HTML, and the LAMP stack for 20 end users'
       ]
     }
   ],
