@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Blog from './blog';
+import Blog from './blogWrapper/Blog';
 
 const BlogWrapperDiv = styled.section`
+    grid-area: app;
     width: 100%;
     height: 100%;
 `;

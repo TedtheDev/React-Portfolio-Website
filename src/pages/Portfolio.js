@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { portfolioData } from '../../data/portfolio';
-import Project from './portfolio_project';
+import Project from '../components/PortfolioProject';
 
 const PortfolioDiv = styled.section`
   width: 100%;
   height: 100%;
-  grid-area: content;
+  grid-area: app;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;

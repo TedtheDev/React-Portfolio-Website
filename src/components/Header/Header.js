@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import LogoName from './logo_name';
-import NavButtons from './nav_buttons';
+import LogoName from './header/LogoName';
+import NavButtons from './header/NavButtons';
 
 const HeaderDiv = styled.header`
   background: #0094ce;

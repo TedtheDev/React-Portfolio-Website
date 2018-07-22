@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContactDiv = styled.section`
+  grid-area: app;
   display: grid;
   height: 100%;
   width: 100%;
@@ -9,7 +10,7 @@ const ContactDiv = styled.section`
   grid-template-rows: auto;
   grid-row-gap: 2%;
   align-content: start;
-  justify-conent: center;
+  justify-content: center;
   margin-top: 5%;
 `;
 

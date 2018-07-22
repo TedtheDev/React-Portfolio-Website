@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Position from './resume_experience_position';
+import Position from './resumeExperience/ResumeExperiencePosition';
 
 const ExperienceDiv = styled.div`
   grid-area: experience;

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { blogData } from '../../data/blog';
-import BlogPost from './blog_post';
+import { blogData } from '../../../data/blog';
+import BlogPost from './blog/BlogPost';
 
 const BlogDiv = styled.div`
     height: 100%;

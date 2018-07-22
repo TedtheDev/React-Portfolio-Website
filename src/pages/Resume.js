@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { resumeData } from '../../data/resume';
 
-import ResumeSkillsCategory from './resume_skills_category';
-import ResumeExperience from './resume_experience';
-import ResumeEducation from './resume_education';
+import ResumeSkillsCategory from './resume/ResumeSkillsCategory';
+import ResumeExperience from './resume/ResumeExperience';
+import ResumeEducation from './resume/ResumeEducation';
 
 /**
  * [unCamelCase turn camelcase into english words,
@@ -29,6 +29,7 @@ function unCamelCase(string) {
 }
 
 const ResumeDiv = styled.section`
+  grid-area: app;
   width: 100%;
   height: 100%;
   display: grid;
@@ -38,7 +39,7 @@ const ResumeDiv = styled.section`
     "links"
     "resumeSkills"
     "experience"
-    "education"
+    "education";
 `;
 
 const SkillsDiv = styled.div`
@@ -49,7 +50,7 @@ const SkillsDiv = styled.div`
   grid-template-areas:
     "skills . ."
     "frameworks languages technologies"
-    ". databases foreignLanguages"
+    ". databases foreignLanguages";
 `;
 
 const LinksDiv = styled.div`

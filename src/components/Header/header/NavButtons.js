@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import NavButton from './nav_button';
-import HamburgerMenu from './hamburger_menu';
+import NavButton from './navButtons/NavButton';
+import HamburgerMenu from './navButtons/HamburgerMenu';
 
 const NavDiv = styled.nav`
   grid-area: nav;

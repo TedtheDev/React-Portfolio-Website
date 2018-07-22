@@ -5,10 +5,10 @@ import { NavLink } from 'react-router-dom';
 
 const HamburgerSliderDiv = styled.div`
     z-index: 1;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
-    width: 120%;
+    width: 100%;
     height:100%;
     overflow: hidden;
     pointer-events: none;

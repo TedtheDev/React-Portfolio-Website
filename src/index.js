@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Header from './components/header';
-import Main from './components/main';
+import Header from './components/Header/Header';
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import BlogWrapper from './pages/BlogWrapper';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact';
 import Footer from './components/footer';
-import HamburgerMenuSlider from './components/hamburger_menu_slider';
+import HamburgerMenuSlider from './components/HamburgerMenuSlider';
 
 const AppStyled = styled.div`
   background: #fcfeff;
+  position: relative;
   width: 100%;
   height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 80% 1fr;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 10% auto 10%;
   grid-template-areas:
-    "header"
-    "app"
-    "footer";
+    "header header header"
+    ". app ."
+    "footer footer footer";
 `;
 
 export class App extends Component {
@@ -41,14 +43,18 @@ export class App extends Component {
   render() {
     return (
       <Router>
-        <div style={{width:"100%",height:"100%"}}>
+        <AppStyled>
           <HamburgerMenuSlider toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen}/>
-          <AppStyled>
-            <Header toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen} />
-            <Main />
-            <Footer />
-          </AppStyled>
-        </div>
+          <Header toggleSlider={this.toggleSlider} sliderOpen={this.state.sliderOpen} />
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/portfolio" component={Portfolio} />
+              <Route exact path="/blog" component={BlogWrapper} />
+              <Route exact path="/resume" component={Resume} />
+              <Route exact path="/contact" component={Contact} />
+          </Switch>
+          <Footer />
+        </AppStyled>
       </Router>
     )
   }

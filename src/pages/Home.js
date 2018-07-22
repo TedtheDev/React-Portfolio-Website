@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { portfolioData } from '../../data/portfolio';
-import Project from './portfolio_project';
+import Project from '../components/PortfolioProject';
 
 const ContentDiv = styled.section`
-  width: 100%;
-  height: 100%;
+grid-area: app;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -21,7 +20,7 @@ const LatestProjectDiv = styled.div`
   transform: translateY(25%);
 `;
 
-const Content = (props) => {
+const Home = (props) => {
   return (
     <ContentDiv>
       <h1>- Software Developer -</h1>
@@ -35,4 +34,4 @@ const Content = (props) => {
   )
 };
 
-export default Content;
+export default Home;
