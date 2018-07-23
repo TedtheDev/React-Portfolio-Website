@@ -9,24 +9,22 @@ import Portfolio from './pages/Portfolio';
 import BlogWrapper from './pages/BlogWrapper';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import Navigation from './components/NewNav/Navigation';
 import Footer from './components/footer';
-import HamburgerMenuSlider from './components/HamburgerMenuSlider';
 
 const AppStyled = styled.div`
   width: 100%;
   height: 100%;
-  background-image: ${props => props.theme.first.bgLinGrad};
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   display: grid;
   grid-template-rows: 10% auto 10%;
   grid-template-columns: 10% 1fr 10%;
   grid-template-areas:
-    "header header header"
+    ". header ."
     ". app ."
-    "footer footer footer";
+    ". footer .";
   color: #FFF3B0;
+  height: 100%;
 `;
 
 const theme = {
@@ -62,7 +60,7 @@ export class App extends Component {
       <ThemeProvider theme={theme}>
         <Router>
           <AppStyled>
-            <Header />
+            <Navigation />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/portfolio" component={Portfolio} />
