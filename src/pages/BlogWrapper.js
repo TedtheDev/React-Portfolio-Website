@@ -6,7 +6,6 @@ import Blog from './blogWrapper/Blog';
 const BlogWrapperDiv = styled.section`
     grid-area: app;
     width: 100%;
-    height: 100%;
 `;
 
 class BlogWrapper extends Component {

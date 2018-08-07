@@ -20,57 +20,18 @@ const BlogScrollDiv = styled.div`
     align-content: start;
 `;
 
-const PagesNavDiv = styled.div`
-  display: grid;
-  grid-template: 1fr / repeat(${Math.ceil(blogData.length / 2)}, minmax(15px, 5%));
-  justify-items: center;
-  grid-column-gap: 2%;
-  margin: 2% 0;
-`;
-
-const PageNumberDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background: #6ccff6;
-  border: 2px #000c11 solid;
-  border-radius: 5px;
-  box-shadow: 4px 5px 0px rgb(116, 124, 127);
-  color: #000c11;
-  cursor: pointer;
-  min-width: 1.2rem;
-`;
-
-const mapPages = (props) => {
-  const pages = [];
-
-  for(let i = 0; i < Math.ceil(blogData.length / 2); i++) {
-    pages.push(<PageNumberDiv key={i} onClick={() => props.changeBlogPosts(i)}><div>{i + 1}</div></PageNumberDiv>);
-  }
-  return pages;
-};
-
 const Blog = (props) => {
   return (
     <BlogDiv>
-      <PagesNavDiv>{mapPages(props)}</PagesNavDiv>
       <BlogScrollDiv>
         {
-          props.blogPostsToShow.map((number, index) => {
-            if(blogData[number] !== undefined) {
-              return <BlogPost key={index} post={blogData[number]} />
-            }
+          blogData.map((blog, index) => {
+              return <BlogPost key={index} post={blog} />
           })
         }
       </BlogScrollDiv>
     </BlogDiv>
   )
 };
-
-React.propTypes = {
-  pageSelected: PropTypes.number.isRequired,
-  blogPostsToShow: PropTypes.array.isRequired,
-  changeBlogPosts: PropTypes.func.isRequired
-}
 
 export default Blog;
