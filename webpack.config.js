@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.HOST": process.env.NODE_ENV === 'production' ? process.env.HOST : '"http://localhost:8000"'
+      "process.env.HOST": process.env.NODE_ENV === 'production' ? JSON.stringify(process.env.HOST) : '"http://localhost:8000"'
     })
   ]
 }
