@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Header from './components/Header/Header';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import BlogWrapper from './pages/BlogWrapper';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Navigation from './components/NewNav/Navigation';
-import Footer from './components/footer';
+import NewFooter from './components/NewFooter';
 
 const AppStyled = styled.div`
   width: 100%;
@@ -18,19 +17,19 @@ const AppStyled = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: 10% auto 10%;
-  grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: 10% 80% 10%;
   grid-template-areas:
     ". header ."
     ". app ."
     ". footer .";
   color: #FFF3B0;
-  height: 100%;
 `;
 
 const theme = {
   first: {
     blue: 'rgba(51, 92, 103)',
     white: 'rgba(255, 243, 176)',
+    whiteDarker: 'rgba(255,243,176,.8)',
     bgLinGrad: 'linear-gradient(80deg, rgba(255, 243, 176) 5%, rgba(51, 92, 103) 5%, rgba(51, 92, 103) 95%, rgba(255, 243, 176) 95%)'
   },
   second: {
@@ -68,6 +67,7 @@ export class App extends Component {
                 <Route exact path="/resume" component={Resume} />
                 <Route exact path="/contact" component={Contact} />
             </Switch>
+            <NewFooter />
           </AppStyled>
         </Router>
       </ThemeProvider>
