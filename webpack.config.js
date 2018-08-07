@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,7 +21,7 @@ module.exports = {
         use: [
           {
             loader: 'url-loader',
-            options: { limit: 40000 }
+            options: {limit: 20 * 1024},
           },
           'image-webpack-loader'
         ]
@@ -30,5 +31,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     hot: true
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.HOST": process.env.NODE_ENV === 'production' ? process.env.HOST : '"http://localhost:8000"'
+    })
+  ]
 }
