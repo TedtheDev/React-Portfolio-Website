@@ -4,47 +4,74 @@ import mail from '../../../assets/001-mail.svg';
 import blog from '../../../assets/002-blog.svg';
 import resume from '../../../assets/003-pen.svg';
 import portfolio from '../../../assets/004-bag.svg';
+import home from '../../../assets/005-home.svg';
 import NavigationLink from './navigation/NavigationLink';
 import { Link } from 'react-router-dom';
+
+const NavigationWrapper = styled.div`
+    background-color: rgba(51, 92, 103);
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 10%;
+    z-index: 5;
+`;
 
 const NavigationNav = styled.nav`
     display: none;
 
     @media (min-width: 800px) {
         display: grid;
-        width: 80%;
-        display: grid;
         grid-template: 100% / 20% 20% 20% 20% 20%;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 10%;
-        background: rgba(51, 92, 103);
-        z-index: 5;
+        height: 100%;
     }
 `;
 
 const MobileNav = styled.nav`
     display: grid;
-    width: 80%;
-    display: grid;
-    grid-template: 100% / 20% 20% 20% 20%;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 10%;
-    background: rgba(51, 92, 103);
-    z-index: 5;
-
+    grid-template: 100% / repeat(5, 20%);
+    height: 100%;
+    width: 100%;
+    justify-items: center;
     @media (min-width: 800px) {
         display: none;
-        
     }
-`
+`;
+
+const MobileLink = styled(Link)`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const MobileLinkImg = styled.img`
+    height: 50%;
+`;
 
 const Navigation = (props) => {
     return (
-        <div>
+        <NavigationWrapper>
+            <MobileNav>
+                <MobileLink to='/'>
+                    <MobileLinkImg src={home} />
+                </MobileLink>
+                <MobileLink to='/portfolio'>
+                    <MobileLinkImg src={portfolio} />
+                </MobileLink>
+                <MobileLink to='/blog'>
+                    <MobileLinkImg src={blog}/>
+                    </MobileLink>
+                <MobileLink to='/resume'>
+                    <MobileLinkImg src={resume}/>
+                    </MobileLink>
+                <MobileLink to='/contact'>
+                    <MobileLinkImg  src={mail}/>
+                </MobileLink>
+            </MobileNav>
             <NavigationNav>
                 <NavigationLink to='/'>Home</NavigationLink>
                 <NavigationLink to='/portfolio'>Portfolio</NavigationLink>
@@ -52,13 +79,7 @@ const Navigation = (props) => {
                 <NavigationLink to='/resume'>Resume</NavigationLink>
                 <NavigationLink to='/contact'>Contact</NavigationLink>
             </NavigationNav>
-            <MobileNav>
-                <Link to='/portfolio'><img width="60%" height="60%" src={portfolio} /></Link>
-                <Link to='/blog'><img width="60%" height="60%" src={blog}/></Link>
-                <Link to='/resume'><img width="60%" height="60%" src={resume}/></Link>
-                <Link to='/contact'><img width="60%" height="60%" src={mail}/></Link>
-            </MobileNav>
-        </div>
+        </NavigationWrapper>
     )
 }
 
