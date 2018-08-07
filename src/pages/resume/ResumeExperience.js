@@ -6,6 +6,9 @@ import Position from './resumeExperience/ResumeExperiencePosition';
 
 const ExperienceDiv = styled.div`
   grid-area: experience;
+  color: ${props => props.theme.first.blue};
+  background-color: rgba(255,243,176,.8);
+  padding: 1rem;
 `;
 
 const ResumeExperience = ({experience, ...props}) => {

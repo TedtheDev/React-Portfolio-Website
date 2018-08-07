@@ -33,7 +33,7 @@ const ResumeDiv = styled.section`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas:
     "links"
@@ -51,53 +51,14 @@ const SkillsDiv = styled.div`
     "skills . ."
     "frameworks languages technologies"
     ". databases foreignLanguages";
+  color: ${props => props.theme.first.blue};
+  background-color: rgba(255,243,176,.8);
+  padding: 1rem;
 `;
-
-const LinksDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "linksHeading linksHeading"
-    "linkedIn github";
-`;
-
-const Link = styled.div`
-  display: grid;
-  grid-template-columns: .2fr minmax(auto, .1fr) 1fr;
-  grid-template-rows: 1fr;
-`;
-
-const linkGridArea1 = {
-  gridArea: "1 / 2 / 1 / 3"
-};
-
-const linkGridArea2 = {
-  gridArea: "1 / 3 / 1 / 4"
-};
 
 const Resume = (props) => {
   return(
     <ResumeDiv>
-      <LinksDiv>
-        <h2>Links</h2>
-        <Link style={{gridArea:"linkedIn"}}>
-          <a style={linkGridArea1} href={resumeData.linkedInLink} target="_blank" rel="noreferrer noopener">
-            <i className="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <div style={linkGridArea2}>
-            {resumeData.linkedInUsername}
-          </div>
-        </Link>
-        <Link style={{gridArea:"github"}}>
-          <a style={linkGridArea1} href={resumeData.gitHubLink} target="_blank" rel="noreferrer noopener">
-            <i className="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <div style={linkGridArea2} >
-            {resumeData.gitHubUsername}
-          </div>
-        </Link>
-      </LinksDiv>
       <SkillsDiv>
         <h2 style={{gridArea:"skills"}}>Skills</h2>
         {

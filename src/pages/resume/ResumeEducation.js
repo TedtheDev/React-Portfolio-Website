@@ -12,7 +12,10 @@ const EducationDiv = styled.div`
       "educationTitle educationTitle educationTitle"
       "college location timePeriod"
       "degree secondaryMajor minor"
-      "studyAbroad studyAbroad studyAbroad"
+      "studyAbroad studyAbroad studyAbroad";
+  color: ${props => props.theme.first.blue};
+  background-color: rgba(255,243,176,.8);
+  padding: 1rem;
 `;
 
 const ResumeEducation = ({ education, ...props }) => {
