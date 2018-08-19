@@ -13,7 +13,7 @@ const NavigationWrapper = styled.div`
     position: fixed;
     top: 0;
     left: 9%;
-    width: 81%;
+    width: 82%;
     height: 10%;
     z-index: 5;
 `;
