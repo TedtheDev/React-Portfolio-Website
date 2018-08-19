@@ -12,8 +12,8 @@ const NavigationWrapper = styled.div`
     background-color: rgba(51, 92, 103);
     position: fixed;
     top: 0;
-    left: 10%;
-    width: 80%;
+    left: 9%;
+    width: 81%;
     height: 10%;
     z-index: 5;
 `;
